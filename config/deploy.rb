@@ -28,7 +28,7 @@ require "bundler/capistrano"
 require "rvm/capistrano"
 
 set :application,   "mdkradomsko"
-set :domain,        "mdkradomsko.lucjansuski.pl"
+set :domain,        "lucjansuski.pl"
 set :repository,    "git@lucjansuski.pl:mdkradomsko"
 set :use_sudo,      false
 set :deploy_to,     "/home/deployer/apps/#{application}"
@@ -40,7 +40,7 @@ role :web, domain
 role :db, domain, :primary => true
 
 # Add RVM's lib directory to the load path.
-set :rvm_ruby_string, 'ruby-1.9.3-p358'
+set :rvm_ruby_string, 'ruby-1.9.3-p392'
 set :rvm_type, :system
 
 namespace :deploy do
