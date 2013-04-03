@@ -1,0 +1,57 @@
+pl:
+  refinery:
+    plugins:
+      types:
+        title: Typy wydarzeń
+      events:
+        title: Wydarzenia
+        hours: godz.
+        soon: Wkrótce
+        today: Dzisiaj
+        archive: Archiwum
+    events:
+      admin:
+        types:
+          actions:
+            create_new: Add New Type
+            reorder: Reorder Types
+            reorder_done: Done Reordering Types
+          records:
+            title: Types
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Types yet. Click "Add New Type" to add your
+              first type.
+          type:
+            view_live_html: View this type live <br/><em>(opens in a new window)</em>
+            edit: Edit this type
+            delete: Remove this type forever
+        events:
+          actions:
+            create_new: Dodaj wydarzene
+            reorder: Zmień kolejność
+            reorder_done: Zatwierdź kolejność
+          records:
+            title: Wydarzenia
+            sorry_no_results: Przepraszamy! Nie znalazłem żadnych wydarzeń.
+            no_items_yet: Nie ma jeszcze wydarzeń.
+          event:
+            view_live_html: Podgląd wydarzenia <br/><em>(otwiera się w nowym oknie)</em>
+            edit: Edytuj wydarzenie
+            delete: Usuń wydarzenie
+      types:
+        show:
+          other: Other Types
+      events:
+        show:
+          other: Inne wydarzenia
+  activerecord:
+    attributes:
+      refinery/events/type:
+        name: Nazwa
+      refinery/events/event:
+        name: Nazwa
+        info: Info
+        description: Opis
+        type: Typ
+        date: Data
+        hours: Godziny
