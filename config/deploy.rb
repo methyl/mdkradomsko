@@ -29,7 +29,7 @@ require "rvm/capistrano"
 
 set :application,   "mdkradomsko"
 set :domain,        "mdkradomsko.lucjansuski.pl"
-set :repository,    "ssh://git@lucjansuski.pl:2222/mdkradomsko"
+set :repository,    "git@lucjansuski.pl:mdkradomsko"
 set :use_sudo,      false
 set :deploy_to,     "/home/deployer/apps/#{application}"
 set :scm,           "git"
