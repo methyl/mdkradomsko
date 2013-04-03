@@ -1,0 +1,10 @@
+<li>
+  <a href="<%= refinery.events_event_path(side_event) %>">
+  <p class="numer"><%= side_event_counter+1 %>.</p>
+    <p class="opis">
+      <span><%= side_event.type.name %>: </span> 
+        <%= side_event.date.strftime("%d %B %Y") %>, <%= side_event.hours %><br />
+      <span class="title">„<%= side_event.name %>”, <span class="small"><%= side_event.info %></span></span>
+    </p>
+  </a>
+</li>

@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="types">
+    <% @types.each do |type| %>
+      <li>
+        <%= link_to type.name, refinery.events_type_path(type) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

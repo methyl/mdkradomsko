@@ -1,0 +1,52 @@
+zh-CN:
+  refinery:
+    plugins:
+      types:
+        title: Types
+      events:
+        title: Events
+    events:
+      admin:
+        types:
+          actions:
+            create_new: 建立新的 Type
+            reorder: 对 Types 重新排序
+            reorder_done: 对 Types 的重新排序结束
+          records:
+            title: Types
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Types . 点击 "Add New Type" 创建一个type.
+          type:
+            view_live_html: 查看 type 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 type
+            delete: 永久删除 type
+        events:
+          actions:
+            create_new: 建立新的 Event
+            reorder: 对 Events 重新排序
+            reorder_done: 对 Events 的重新排序结束
+          records:
+            title: Events
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Events . 点击 "Add New Event" 创建一个event.
+          event:
+            view_live_html: 查看 event 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 event
+            delete: 永久删除 event
+      types:
+        show:
+          other: 其他 Types
+      events:
+        show:
+          other: 其他 Events
+  activerecord:
+    attributes:
+      refinery/events/type:
+        name: Name
+      refinery/events/event:
+        name: Name
+        info: Info
+        description: Description
+        date: Date
+        hours: Hours
+        type_id: Type

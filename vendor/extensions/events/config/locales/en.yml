@@ -1,0 +1,54 @@
+en:
+  refinery:
+    plugins:
+      types:
+        title: Types
+      events:
+        title: Events
+    events:
+      admin:
+        types:
+          actions:
+            create_new: Add New Type
+            reorder: Reorder Types
+            reorder_done: Done Reordering Types
+          records:
+            title: Types
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Types yet. Click "Add New Type" to add your
+              first type.
+          type:
+            view_live_html: View this type live <br/><em>(opens in a new window)</em>
+            edit: Edit this type
+            delete: Remove this type forever
+        events:
+          actions:
+            create_new: Add New Event
+            reorder: Reorder Events
+            reorder_done: Done Reordering Events
+          records:
+            title: Events
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Events yet. Click "Add New Event" to add your
+              first event.
+          event:
+            view_live_html: View this event live <br/><em>(opens in a new window)</em>
+            edit: Edit this event
+            delete: Remove this event forever
+      types:
+        show:
+          other: Other Types
+      events:
+        show:
+          other: Other Events
+  activerecord:
+    attributes:
+      refinery/events/type:
+        name: Name
+      refinery/events/event:
+        name: Name
+        info: Info
+        description: Description
+        date: Date
+        hours: Hours
+        type_id: Type

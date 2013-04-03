@@ -1,0 +1,27 @@
+<% content_for :body_content_title do %>
+  <%= @type.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @type.name %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="types">
+      <% @types.each do |type| %>
+        <li>
+          <%= link_to type.name, refinery.events_type_path(type) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

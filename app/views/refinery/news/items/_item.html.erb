@@ -1,0 +1,14 @@
+<section class="news">
+  <div class="box-news">
+    <h5><%= item.title %></h5>
+    <div class="center-news">
+      <p>
+        <%= raw item.body.truncate(1050) %>
+      </p>
+    </div>
+    <div class="bottom-news">
+      <span class="data-add">12.12.2013r.</span>
+      <a href="<%= refinery.news_item_path(item) %>" class="more shadow"><%= t('news.more') %></a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<%= render 'refinery/head' %>
+
+<body>
+<!--panele-->  
+<aside id="sidebar">
+  <aside id="facebook">
+    <a href="#" class="fb"></a>
+  </aside>
+  <aside id="twitter">
+    <a href="#" class="twitter"></a>
+  </aside>
+  <aside id="youtube">
+    <a href="#" class="youtube"></a>
+  </aside>
+  <aside id="bip">
+    <a href="#" class="bip"></a>
+  </aside>
+  <aside id="projekty">
+    <a href="#" class="projects"></a>
+  </aside>
+</aside>
+
+<!--HEADER-->  
+<header>
+  <div class="container">
+    <div id="top">
+      <h1><a href="/" title="MIEJSKI DOM KULTURY W RADOMSKU">MDK</a></h1>
+      <aside id="slogan">
+        <h6>z pasją dla kultury - kultura z pasją</h6>
+        <h4>MIEJSKI DOM KULTURY W RADOMSKU</h4>
+      </aside>
+    </div>
+    <%= render :partial => "/refinery/menu" %>
+  </div>
+</header>
+
+<!--CONTENT-->  
+<div id="content">
+  <%= yield %>
+</div>
+
+<!--Advertisement-->  
+<aside id="advertisement">
+  <h2 class="hide">Reklama</h2>
+  <div class="button-advertisement">
+    <a href="#" class="advertisement"></a>
+  </div>
+</aside>
+
+<!--FOOTER-->  
+<footer>
+  <aside>
+    <div class="container">
+      <p class="title">Partnerzy i sponsorzy:</p>
+      <div class="box-partners_sponsors">
+          <%= image_tag 'partner2.jpg', size: '71x44', alt: 'Partner 2' %> 
+          <%= image_tag 'partner3.jpg', size: '88x56', alt: 'Partner 3' %> 
+          <%= image_tag 'partner4.jpg', size: '85x51', alt: 'Partner 4' %> 
+          <%= image_tag 'partner5.jpg', size: '81x32', alt: 'Partner 5' %> 
+          <%= image_tag 'partner6.jpg', size: '85x34', alt: 'Partner 6' %> 
+        </div> 
+    </div>   
+    
+  </aside>
+  <div class="container">
+    <section id="footer">
+      <div class="copy-realization">
+        <p class="copy">
+          Copyrights 2013 by Miejski Dom Kultury w Radomsku. All Rights Reserved.</p>
+        <p class="realization">Projekt i Realziacja: <a href="http://kampanieSEO.pl">KampanieSEO.pl</a></p>
+      </div>
+      
+      <div class="visits">
+        <p>Odwiedzono: </p>
+        <p>71231233 razy</p>
+      </div>
+    </section>
+  </div>
+</footer>
+
+<!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<%= render 'refinery/javascripts' %>
+</body>
+</html>

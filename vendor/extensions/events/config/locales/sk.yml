@@ -1,0 +1,54 @@
+sk:
+  refinery:
+    plugins:
+      types:
+        title: Types
+      events:
+        title: Events
+    events:
+      admin:
+        types:
+          actions:
+            create_new: Pridať Type
+            reorder: Preusporiadať Types
+            reorder_done: Koniec radenia Types
+          records:
+            title: Types
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Types. Kliknite na "Pridať Type"
+              pre pridanie prvého type.
+          type:
+            view_live_html: Zobraziť náhľad type<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť type
+            delete: Zmazať type
+        events:
+          actions:
+            create_new: Pridať Event
+            reorder: Preusporiadať Events
+            reorder_done: Koniec radenia Events
+          records:
+            title: Events
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Events. Kliknite na "Pridať Event"
+              pre pridanie prvého event.
+          event:
+            view_live_html: Zobraziť náhľad event<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť event
+            delete: Zmazať event
+      types:
+        show:
+          other: Daľšie Types
+      events:
+        show:
+          other: Daľšie Events
+  activerecord:
+    attributes:
+      refinery/events/type:
+        name: Name
+      refinery/events/event:
+        name: Name
+        info: Info
+        description: Description
+        date: Date
+        hours: Hours
+        type_id: Type

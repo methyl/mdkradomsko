@@ -1,0 +1,592 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ~~ REUSABLE ~~ */
+
+.hide {
+	text-indent: -998em;
+	height: 0px;
+	margin:0px;
+	line-height:0px;
+}
+
+.clear{
+	clear:both;	
+}
+.shadow, nav ul li a, #slogan h4, #slogan h6,
+footer aside p.title, #content .content-news h2,
+.key-events ul li a, aside#newsletter form input[type='submit']{
+	text-shadow:#570e0c 1px 1px 0px;
+	color:#fff;
+}
+/* ~~ LINKI ~~ */
+a:link, a:hover, nav a:active, nav a:focus {
+    text-decoration: none;
+}
+a:link, a:visited {
+	text-decoration:none;
+	outline:0;
+}
+a:hover {
+	text-decoration:none;
+}
+a:focus {
+	outline:none;
+}
+a.more, a:link.more, aside#newsletter form input[type='submit']{
+	float: right;
+	background-image: url(/assets/button-bg.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	padding:8px 6px;
+	background-color:#c10900;	
+	font-size:1.4em;	
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+a.more:hover, nav ul li a:hover, aside#newsletter form input[type='submit']:hover{
+	text-shadow:none;	
+}
+/* ~~ LAYOUT ~~ */
+html {
+	/*overflow: scroll;*/
+}
+body {
+	font-size: 0.625em; /* 10px */
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding: 0px;
+	margin:0px;
+	position:relative;
+	color:#000;
+	background-color:#fafafa;
+}
+body p{
+	color:#000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 1.4em;
+    line-height: 17px;
+    text-align: justify;	
+}
+.link{
+	height:0px;
+	text-indent:-998em;	
+}
+.container{
+	margin:0px auto;
+	width:950px;	
+}
+header, footer, #content{
+	width:100%;
+	overflow:hidden;
+	float:left;
+}
+
+/* ~~ NAGŁÓWKI ~~ */
+
+h3{
+	font-size:2.2em;
+	/*font-family: 'oxygenregular';*/
+	font-weight:bold;
+	color:#000;
+}
+h4{
+	font-size:2em;
+}
+h5, #content h2{
+	font-size:2.1em;
+	color:#000;
+	font-weight:bold;
+}
+#content .content-news h2{
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 2.8em;
+    font-weight: normal;
+}
+h6{
+	font-size:1.7em;
+}
+
+/* ~~ PANEL BOCZNY ~~ */
+aside#sidebar{
+	position:absolute;
+	top:286px;
+	z-index: 1200;
+}
+	aside#sidebar aside{
+		width:100%;
+		float:left;
+		clear:both;	
+	}
+	aside#sidebar aside a{
+		width:42px;
+		float:left;
+		margin:0px 0px 5px 0px;		
+		background-repeat: no-repeat;
+		background-position: 0px 0px;
+		height: 42px;	
+	}
+		aside#sidebar aside a.fb{
+			background-image: url(/assets/icon-facebook.png);
+		}
+		aside#sidebar aside a.twitter{
+			background-image: url(/assets/icon-twitter.png);			
+		}
+		aside#sidebar aside a.youtube{
+			background-image: url(/assets/icon-youtube.png);	
+			width:43px;
+			height:43px;		
+		}
+		aside#sidebar aside a.bip{
+			background-image: url(/assets/icon-bip.png);
+			width:43px;
+			height:43px;			
+		}
+		aside#sidebar aside a.projects{
+			background-image: url(/assets/icon-projekty.png);
+			height: 127px;
+			width: 44px;			
+		}
+
+/* ~~ HEADER ~~ */
+header{
+	background-image: url(/assets/header-bg.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;	
+	height:192px;	
+}
+    header .container{
+		background-image: url(/assets/top-bg_slogan.jpg);
+		background-repeat: no-repeat;
+		background-position: 82% 0px;	
+			
+	}
+		header .container #top{
+			width:100%;
+			margin-bottom:12px;	
+			padding-bottom:39px;
+			float:left;
+		}
+			h1{
+				float:left;
+				margin:44px 0px 0px 19px;
+				width:153px;
+				height:46px;	
+			}
+				h1 a{
+					float: left;
+					width: 153px;
+					text-indent:-998em;
+					height: 46px;
+					background-image: url(/assets/logo-mdk.jpg);
+					background-repeat: no-repeat;
+					background-position: 0px 0px;				
+				}
+				
+			#slogan{
+				float:right;
+				margin:42px 4px 0px 0px;
+				width:364px;
+				
+			}
+				#slogan h4, #slogan h6{
+					text-align:right;	
+				}
+				#slogan h4, nav ul li a{
+					text-transform:uppercase;	
+				}
+				#slogan h6{
+					font-style:italic;	
+					margin-bottom:12px;			
+				}
+				
+		nav{
+			clear:both;
+			width:100%;	
+			margin-bottom:10px;
+			margin-top:12px;
+			float:left;
+		}
+			nav ul, nav ul li{
+				float:left;	
+			}
+			nav ul{
+				width:100%;	
+			}
+				nav ul li{
+					margin:0px;	
+				}
+					nav ul li a, nav ul li a:link{
+						font-size:1.4em;
+						font-family:Calibri;
+						padding:14px 14px;	
+					}
+					nav ul li a:hover, nav ul li a.active, nav ul li a:active{
+						background-color:#640905;	
+					}
+				
+/* ~~ CONTENT ~~ */
+#content .container.top{		
+	width:977px;
+	clear:both;	
+}
+	/* ~~ Aktualności w top ~~ */
+	#top-news{
+		width:949px;	
+		height:348px;
+		position:relative;
+		float:left;
+		padding:0px 14px;
+		margin-bottom:29px;
+		overflow:hidden;
+	}
+		.shadow-top{
+			background-image: url(/assets/top-shadow.png);
+			background-repeat: no-repeat;
+			background-position: center top;
+			width:977px;
+			height:33px;
+			position:absolute;
+			top:0px;
+			z-index:1100;
+		}
+		.fotos-topnews, .foto-events{
+			position:absolute;
+			width:949px;
+			height:100%;
+			z-index:900;	
+		}
+		.content-news{
+			height:311px;	
+		}
+		.content-news, .key-events ul{
+			background-image: url(/assets/top-bg_text.png);
+			background-position: 0 0;
+			background-repeat: repeat;
+			float: right;
+			overflow: hidden;
+			padding: 17px 24px 17px 30px;
+			position: absolute;
+			right: 14px;
+			width: 318px;
+			z-index: 1000;
+		}
+			.content-news h2{
+				margin-bottom:20px;
+			}
+			.content-news p{
+				font-family:Tahoma, Geneva, sans-serif;
+				color:#fff;
+			}
+			.content-news a.more{
+				margin-top:18px;	
+			}
+	/* ~~ Główna kolumna ~~ */
+	#col-center{
+		float:left;
+		width:576px;
+	}
+		/* ~~ events ~~ */
+		#events, .key-events{
+			width:100%;	
+		}
+			#events h2{
+				margin-bottom:18px;
+			}
+			.key-events{
+				overflow:hidden;
+				width:100%;	
+				position:relative;
+				height:118px;
+				float:left;
+				margin-bottom:12px;
+			}
+				 .key-events ul{
+					padding:0px;
+					width:205px;
+					height:118px; 
+					float:left;
+					right: 2px;
+					
+				 }
+				    .key-events ul li{
+						float: left;
+						width: 100%;
+									
+					}
+						.key-events ul li a{
+							font-weight:bold;
+							padding:8px 16px;
+							font-size:1.4em;
+							width:173px;
+							overflow:hidden;
+							float:left;
+						}
+						.key-events ul li a:hover,
+						.key-events ul li a.active, .key-events ul li a:active{
+							background-color: #c30a00;
+							background-image: url(/assets/button-bg.jpg);
+							background-repeat: repeat-x;
+							background-position: 0px 0px;								
+						}
+		/* ~~ Lista aktualności ~~ */
+		#news{
+			margin-top:16px;
+			width:100%;
+			float:left;
+		}
+			.news, .all-news{
+				width:100%;
+				border-top:solid 1px #c5c5c5;
+				float:left;
+				clear:both;
+				margin-top:17px;
+			}
+				.box-news{
+					width:100%;
+					margin:0px;
+					float: left;
+				}
+					.box-news h5{
+						margin:27px 0px;
+						width:100%;
+						float: left;
+					}
+					.center-news, .center-newscinema{
+						float:left;
+						width:100%;
+						height:99px;
+						overflow:hidden;
+					}
+						.center-news img{
+							float:left;
+							overflow:hidden;
+							height:99px;
+							width:154px;
+						}
+						.center-news p{
+							float: right;
+							line-height: 17px;
+							margin: -4px 0 0;
+							padding: 0;
+						}
+					.bottom-news{
+						margin-top:19px;
+						background-color:#f0f0f0;
+						float:left;
+						width:100%;
+					}
+						.data-add{
+							font-size:1.4em;
+							float:left;
+							line-height:30px;
+							margin-left:9px;
+						}
+						.box-news a.more{
+							margin:0px;
+						}
+				.all-news{
+					padding-top:10px;	
+					margin-top:27px;
+				}
+					
+	/* ~~ Prawa kolumna ~~ */
+	#col-right{
+		float:right;
+		width:342px;
+	}
+		#col-right section, #col-right aside{
+			float:left;
+			width:100%;
+			clear:both;
+			margin-bottom:30px;	
+		}
+		#col-right section h2, #col-right aside h2,
+		#col-right section h5, #col-right aside h5{
+			line-height:28px;
+			float:left;
+		}
+		/* ~~ Promowane ~~ */
+			#promoted h2{
+				margin-bottom:34px;
+			}
+			#promoted .box-promoted{
+				width:342px;
+				height:174px;
+				overflow:hidden;
+				display:table;
+			}
+				#promoted .box-promoted a{
+					width:154px;
+					height:146px;
+					display: table-cell;
+					text-align:center;
+  		   			vertical-align: middle;
+				}
+		/* ~~ Dzisiaj ~~ */
+			ul#today-see, #see ul{
+				clear:both;
+				width:100%;
+				float:left;
+				margin-top:13px;
+			}
+				ul#today-see li{
+					float:left;	
+					width:100%;
+					padding-top: 22px;
+					padding-bottom: 10px;
+					border-bottom:solid 1px #c5c5c5;
+				}
+				ul#today-see li.last,
+				ul#today-see li:last-child{
+					border-bottom:none;	
+				}
+					ul#today-see li a{
+						/*color:#000;	*/
+						font-weight:bold;
+					}
+					ul#today-see li p.numer{
+						float:left;	
+						font-size:5em;
+					}
+					ul#today-see li p.opis{
+						float: left;
+						line-height: 22px;
+						margin-top: -12px;
+						width: 86%;
+					}
+						ul#today-see li p.opis span{
+							font-size:1.2em;
+						}
+				ul#today-see li p.opis span.title {
+					font-size: 1em;
+				}
+				ul#today-see li p.opis .small {
+					font-size: 0.8em;
+				}
+				ul#today-see li a:hover p, 
+				ul#today-see li.active p{
+					color:#b21900;	
+				}
+				
+				
+		/* ~~ Newsletter ~~ */
+		#col-right aside#newsletter{
+			margin-bottom:34px;	
+		}
+			#col-right aside#newsletter h5{
+				width:100%;	
+				margin-bottom:20px;
+			}
+				aside#newsletter form{
+					width:100%;
+					margin-top:20px;
+					position:relative;
+				}
+					aside#newsletter form input[type='text']{
+						float:left;
+						padding:8px 6px;
+						font-size:1.4em;
+						background-color:#f0f0f0;
+						width:90%;
+						position:absolute;
+						left:0px;
+						border:none;
+					}
+					aside#newsletter form input[type='submit']{
+						border:none;
+						cursor:pointer;
+						position:absolute;
+						right:0px;
+						padding:7px 14px;
+					}
+				
+		/* ~~ Kalendarium ~~ */
+			.box-calendar{
+				margin-top:18px;
+				float:left;
+				width:346px;
+				height:208px;	
+			}
+
+/* ~~ Advertisement ~~ */
+aside#advertisement{
+	width:100%;
+	margin-top:18px;
+	margin-bottom:0px;
+	display:table;
+	float:left;	
+}
+	.button-advertisement{
+		width: 150px;	
+		height: 25px;
+		margin:0 auto;
+	}
+		aside#advertisement .button-advertisement a.advertisement{
+			background-image: url(/assets/reklama-button.jpg);
+			background-repeat: no-repeat;
+			background-position: center top;
+			height: 25px;
+			width: 150px;
+			display: table-cell;
+  		    vertical-align: middle;
+			text-indent:-998em;		
+		}
+
+	
+/* ~~ FOOTER ~~ */
+footer aside{
+	background-color:#383838;	
+	height:105px;
+	margin-bottom:25px;
+}
+	footer aside .container{
+		width:1028px;	
+		padding:17px 0px;
+		height:72px;
+		overflow:hidden;
+		display:table;	
+	}
+		footer aside p.title{
+			float:left;	
+			margin-right:4px;
+			line-height: 70px;
+    		margin-left: 37px;
+			text-shadow:#000 1px 1px;
+		}
+		.box-partners_sponsors{
+			float:right;
+			margin:0 auto;
+			width:82%;
+		}
+			.box-partners_sponsors img{
+				padding-left: 2%;
+    			padding-right: 2%;
+  		    	vertical-align: middle;
+			}
+			
+			
+	#footer{
+		width:100%;
+		margin-bottom:10px;
+		float:left;
+	}
+		#footer .copy-realization{
+			float:left;
+		}
+		
+		#footer .visits{
+			float:right;
+			margin-right:6px;
+		}
+			#footer .visits p{
+				text-align:right;	
+			}
+				#footer a:link, a{
+					color:#000;	
+				}
+				#footer a:hover{
+					color:#383838;	
+				}
+				

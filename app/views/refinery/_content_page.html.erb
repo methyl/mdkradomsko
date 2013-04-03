@@ -1,0 +1,20 @@
+<div class="container top">
+  <section id="top-news" class="subpage">
+    <div class="shadow-top"></div>
+    <div class="fotos-topnews">
+      <img src="/assets/top-foto.jpg" width="949" height="346" alt="Najnowsze events"> 
+    </div>
+    <div class="content-news">
+      <h2><%= yield :body_content_title %></h2>
+    </div>
+  </section> 
+</div>
+
+<div class="container">
+  <div>
+    <%= render_content_page(@page, {
+      :hide_sections => [:body_content_title],
+      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
+    }) %>
+  </div>
+</div>

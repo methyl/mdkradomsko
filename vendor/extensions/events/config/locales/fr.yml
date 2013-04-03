@@ -1,0 +1,54 @@
+fr:
+  refinery:
+    plugins:
+      types:
+        title: Types
+      events:
+        title: Events
+    events:
+      admin:
+        types:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Type
+            reorder: Réordonner les Types
+            reorder_done: Fin de réordonnancement des Types
+          records:
+            title: Types
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Type. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Type" pour créer votre premi(er/ère) type.
+          type:
+            view_live_html: Voir ce(t/tte) type <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) type
+            delete: Supprimer définitivement ce(t/tte) type
+        events:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Event
+            reorder: Réordonner les Events
+            reorder_done: Fin de réordonnancement des Events
+          records:
+            title: Events
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Event. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Event" pour créer votre premi(er/ère) event.
+          event:
+            view_live_html: Voir ce(t/tte) event <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) event
+            delete: Supprimer définitivement ce(t/tte) event
+      types:
+        show:
+          other: Autres Types
+      events:
+        show:
+          other: Autres Events
+  activerecord:
+    attributes:
+      refinery/events/type:
+        name: Name
+      refinery/events/event:
+        name: Name
+        info: Info
+        description: Description
+        date: Date
+        hours: Hours
+        type_id: Type

@@ -1,0 +1,14 @@
+<% content_for :body_content_title, @item.title %>
+<% content_for :title, @item.title %>
+<% content_for :body do %>
+  <article class="news_item">
+    <% if @item.source.present? %>
+      <p>
+        <small><%= t('.source') %> <%= @item.source %></small>
+      </p>
+    <% end %>
+    <%= @item.body.html_safe %>
+  </article>
+<% end %>
+
+<%= render "/refinery/content_page" %>

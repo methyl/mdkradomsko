@@ -1,0 +1,119 @@
+<div class="container top">
+    <section id="top-news">
+      <div class="shadow-top"></div>
+      <div class="fotos-topnews">
+        <%= image_tag 'top-foto.jpg', size: '949x346'  %>
+      </div>
+      <div class="content-news">
+        <h2><%= @latest_news.title %></h2>
+        <p>
+          <%= strip_tags(@latest_news.body).truncate(610) %>
+        </p>
+        <a href="<%= refinery.news_item_path(@latest_news) %>" class="more shadow"><%= t('news.more') %></a>
+      </div>
+    </section> 
+   </div>
+   <div class="container">
+    <div id="col-center">
+    
+      <section id="events">
+        <h2>WYDARZYŁO SIĘ</h2>
+        <div class="key-events">
+          <div class="foto-events">
+            <%= image_tag 'wydarzenia-foto.jpg', size: '573x118', alt: 'Wydzarzenie' %> 
+          </div>
+          <ul>
+            <li><a href="#">1. Tytuł spektaklu</a></li>
+            <li><a href="#">2. Tytuł spektaklu</a></li>
+            <li><a href="#" class="active">3. Tytuł spektaklu</a></li>
+            <li><a href="#">4. Tytuł spektaklu</a></li>
+          </ul>
+        </div>
+         <a href="#" class="more shadow">Zobacz wszystkie</a>
+      </section>
+
+      <section id="news">
+        <%= render @news %>
+        <div class="all-news"><a href="<%= refinery.news_items_path %>" class="more shadow"><%= t('news.see_all') %></a></div>
+      </section>
+
+    </div>
+    <div id="col-right">
+       <section id="promoted">
+        <h2>Promowane</h2>
+        <div class="box-promoted">
+          <%= raw @page.content_for(:promoted) %>
+        </div>       
+      </section>
+      
+      <section id="today">
+        <h2>Dzisiaj</h2>
+        <a href="#" class="more shadow">Zobacz wszystkie</a>
+        <ul id="today-see">
+          <%= render :partial => '/refinery/events/events/side_event', :collection => @side_events %>
+<!--           <li class="active">
+            <p class="numer"><a href="#">1.</a></p>
+            <p class="opis">
+              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900<br />
+              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
+            </p>
+          </li>
+          <li>
+            <p class="numer"><a href="#">2.</a></p>
+            <p class="opis">
+              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900<br />
+              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
+            </p>
+          </li>
+          <li>
+            <p class="numer"><a href="#">3.</a></p>
+            <p class="opis">
+              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900 <br />
+              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
+            </p>
+          </li>
+          <li>
+            <p class="numer"><a href="#">4.</a></p>
+            <p class="opis">
+              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900<br />
+              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
+            </p>
+          </li>
+          <li class="last">
+            <p class="numer"><a href="#">5.</a></p>
+            <p class="opis">
+              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900<br />
+              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
+            </p>
+          </li> -->
+          
+        </ul>
+      </section>
+      
+      <aside id="newsletter">
+        <h5>Newsletter</h5>
+        <p>
+          Chcesz otrzymywać najnowsze informacje z naszego do-
+mu kultury? Wpisz Twój e-mail i kliknij „Zapisz”.
+        </p>
+        <form class="newsletter" method="post" action="/newsletter">
+          <section>
+            <input type="text" id="email" /> 
+            <input type="submit" id="zapisz" value="Zapisz" class="button newsletter" />
+          </section>
+        
+        </form>
+      </aside>
+      
+      <aside id="calendar">
+        <h5>Kalendarium imprez</h5>
+        <a href="#" class="more shadow">Zobacz Archiwum</a>
+        <div class="box-calendar">
+          <a href="#"><%= image_tag 'kalendarium.jpg', size: '348x208', alt: 'Kalendarium imprez MDK' %></a>
+        </div>
+      </aside>
+      
+    </div>
+  </div>
+
+
