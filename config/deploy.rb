@@ -26,6 +26,8 @@
 
 require "bundler/capistrano"
 require "rvm/capistrano"
+load 'deploy/assets'
+
 
 set :application,   "mdkradomsko"
 set :domain,        "lucjansuski.pl"
