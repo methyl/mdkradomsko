@@ -55,16 +55,17 @@
 			}
 				.show-details .movie-title h6{
 					font-family:Tahoma, Geneva, sans-serif;
-					font-size:2.1em;
+					font-size:1.6em;
 					margin:0px;
 					padding:0px;
-					font-weight:normal;
+					font-weight:bold;
 				}
 				
 		.scroll-content{
 			float:left;
 			width:374px;
 			height:100%;
+			overflow:hidden;
 			margin-top:-2px;
 		}
 		
@@ -84,12 +85,12 @@
 				width: 11px;	
 			}
 			.scroller a.arrow-top{
-				background-image: url(../images/arrow-top.jpg);
+				background-image: url(/assets/arrow-top.jpg);
 				top:0px;
 				right:0px;
 			}
 			.scroller a.arrow-bottom{
-				background-image: url(../images/arrow-bottom.jpg);
+				background-image: url(/assets/arrow-bottom.jpg);
 				bottom:0px;
 				right:0px;
 			}
@@ -110,13 +111,13 @@
 		}
 		.all-news.pagination a.prev{
 			float: left;
-			background-image: url(../images/arrow-left.jpg);
+			background-image: url(/assets/arrow-left.jpg);
 			padding-left:23px;	
 			background-position: left center;	
 		}
 		.all-news.pagination a.next{
 			float:right;	
-			background-image: url(../images/arrow-right.jpg);
+			background-image: url(/assets/arrow-right.jpg);
 			padding-right:23px;
 			background-position: right center;
 		}	
@@ -142,7 +143,7 @@
 				width: 100%;
 				margin-top: 19px;
 				padding-left: 23px;
-				background-image: url(../images/bullets-see.jpg);
+				background-image: url(/assets/bullets-see.jpg);
 				background-repeat: no-repeat;
 				background-position: left center;				
 			}

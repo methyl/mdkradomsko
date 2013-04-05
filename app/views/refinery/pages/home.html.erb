@@ -23,13 +23,12 @@
             <%= image_tag 'wydarzenia-foto.jpg', size: '573x118', alt: 'Wydzarzenie' %> 
           </div>
           <ul>
-            <li><a href="#">1. Tytuł spektaklu</a></li>
-            <li><a href="#">2. Tytuł spektaklu</a></li>
-            <li><a href="#" class="active">3. Tytuł spektaklu</a></li>
-            <li><a href="#">4. Tytuł spektaklu</a></li>
+            <% @previous_events.each_with_index do |event, i| %>
+              <li><a href="#"><%= i+1 %>. <%= event.name %></a></li>
+            <% end %>
           </ul>
         </div>
-         <a href="#" class="more shadow">Zobacz wszystkie</a>
+         <%= link_to 'Zobacz wszystkie', events_events_path, :class => [:more, :shadow] %>
       </section>
 
       <section id="news">
@@ -48,7 +47,7 @@
       
       <section id="today">
         <h2>Dzisiaj</h2>
-        <a href="#" class="more shadow">Zobacz wszystkie</a>
+        <%= link_to 'Zobacz wszystkie', events_events_path, :class => [:more, :shadow] %>
         <ul id="today-see">
           <%= render :partial => '/refinery/events/events/side_event', :collection => @side_events %>
 <!--           <li class="active">

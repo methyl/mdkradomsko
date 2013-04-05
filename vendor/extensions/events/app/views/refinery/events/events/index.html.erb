@@ -1,11 +1,36 @@
 <% content_for :body do %>
-  <ul id="events">
+  <section id="news" class="cinema">
     <% @events.each do |event| %>
-      <li>
-        <%= link_to event.name, refinery.events_event_path(event) %>
-      </li>
+      <section class="news">
+        <div class="box-news">
+          <h5><%= event.type.name %></h5>
+          <div class="center-newscinema">
+            <div class="show-details">
+              <div class="days-hours">
+                <p><%= I18n.l event.date, format: :short %></p>
+                <p><%= event.hours %></p>
+              </div>
+              <div class="movie-title">
+                <h6><%= event.name %></h6>
+                <p><%= event.info %></p>
+              </div>
+            </div>
+            <div class="scroll-content">
+                <p><%= raw event.description %></p>
+            </div>
+            <div class="scroller">
+              <a href="#" class="arrow-top"></a>
+              <a href="#" class="arrow-bottom"></a>
+            </div>
+          </div>
+        </div>
+      </section>
     <% end %>
-  </ul>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  abc
 <% end %>
 
 <%= render '/refinery/content_page' %>

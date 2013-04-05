@@ -2,3 +2,6 @@ pl:
   news: 
     more: "Czytaj więcej"
     see_all: "Zobacz wszystkie"
+  date:
+    formats:
+      default: "%d %B %Y"

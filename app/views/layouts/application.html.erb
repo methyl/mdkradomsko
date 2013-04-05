@@ -55,11 +55,9 @@
     <div class="container">
       <p class="title">Partnerzy i sponsorzy:</p>
       <div class="box-partners_sponsors">
-          <%= image_tag 'partner2.jpg', size: '71x44', alt: 'Partner 2' %> 
-          <%= image_tag 'partner3.jpg', size: '88x56', alt: 'Partner 3' %> 
-          <%= image_tag 'partner4.jpg', size: '85x51', alt: 'Partner 4' %> 
-          <%= image_tag 'partner5.jpg', size: '81x32', alt: 'Partner 5' %> 
-          <%= image_tag 'partner6.jpg', size: '85x34', alt: 'Partner 6' %> 
+        <% 7.times do |i| %>
+          <%= image_tag "partner#{i+1}.jpg" %> 
+        <% end %>
         </div> 
     </div>   
     

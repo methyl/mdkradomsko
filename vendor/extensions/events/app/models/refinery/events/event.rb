@@ -20,6 +20,7 @@ module Refinery
       scope :by_date, lambda { |date| where(:date => date.beginning_of_day..date.end_of_day) }
       scope :soon,  where(:date => DateTime.now..DateTime.now + 10.days)
       scope :today, by_date(Date.today)
+      scope :previous, where('date < ?', DateTime.now)
 
       def type_name
         type.name.downcase
