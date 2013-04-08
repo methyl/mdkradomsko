@@ -1,0 +1,1084 @@
+
+---
+refinery_roles_users:
+  columns:
+  - user_id
+  - role_id
+  records: 
+  - - 1
+    - 1
+  - - 1
+    - 2
+
+---
+refinery_roles:
+  columns:
+  - id
+  - title
+  records: 
+  - - 1
+    - Refinery
+  - - 2
+    - Superuser
+
+---
+refinery_user_plugins:
+  columns:
+  - id
+  - user_id
+  - name
+  - position
+  records: 
+  - - 9
+    - 1
+    - refinery_users
+    - 0
+  - - 10
+    - 1
+    - refinery_dashboard
+    - 1
+  - - 11
+    - 1
+    - refinery_images
+    - 2
+  - - 12
+    - 1
+    - refinery_files
+    - 3
+  - - 13
+    - 1
+    - refinery_pages
+    - 4
+  - - 14
+    - 1
+    - refinery_settings
+    - 8
+  - - 15
+    - 1
+    - refinerycms_news
+    - 5
+  - - 16
+    - 1
+    - refinerycms-events
+    - 7
+  - - 17
+    - 1
+    - refinery_core
+    - 8
+  - - 18
+    - 1
+    - refinery_dialogs
+    - 9
+  - - 19
+    - 1
+    - refinery_i18n
+    - 10
+  - - 20
+    - 1
+    - events
+    - 6
+  - - 21
+    - 1
+    - types
+    - 7
+
+---
+refinery_users:
+  columns:
+  - id
+  - username
+  - email
+  - encrypted_password
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - sign_in_count
+  - remember_created_at
+  - reset_password_token
+  - reset_password_sent_at
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - admin
+    - lucjansuski@gmail.com
+    - $2a$10$z.GoKwy2MBavaO17S47gI.t0ayc/86.mBQLHGiEvfe2jhtlX2ABoy
+    - '2013-04-04 14:02:00.189990'
+    - '2013-04-03 15:54:26.824488'
+    - 127.0.0.1
+    - 127.0.0.1
+    - 3
+    - 
+    - 
+    - 
+    - '2013-03-23 11:42:50.343822'
+    - '2013-04-04 14:02:00.191334'
+
+---
+refinery_page_parts:
+  columns:
+  - id
+  - refinery_page_id
+  - title
+  - body
+  - position
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - Body
+    - <p><img src="/system/images/W1siZiIsIjIwMTMvMDMvMjMvMTNfMDBfMDNfMzYwXzY0NjkxXzI5MTMyMzc2NDMyMjk2NV8xNTM2NjEyMTMwX24uanBnIl0sWyJwIiwidGh1bWIiLCIyMjV4MjU1PiJdXQ/64691_291323764322965_1536612130_n.jpg"
+      title="64691 291323764322965 1536612130 N" alt="64691 291323764322965 1536612130
+      N" rel="225x255" width="225" height="169" class="selected_by_wym image-align-left"
+      />Welcome to our site. This is just a place holder page while we gather our
+      content.</p>
+    - 0
+    - '2013-03-23 11:37:45.142417'
+    - '2013-03-23 14:37:28.602696'
+  - - 3
+    - 2
+    - Body
+    - <h2>Sorry, there was a problem...</h2><p>The page you requested was not found.</p><p><a
+      href='/'>Return to the home page</a></p>
+    - 0
+    - '2013-03-23 11:37:45.711622'
+    - '2013-03-23 11:37:45.711622'
+  - - 6
+    - 4
+    - Body
+    - ''
+    - 0
+    - '2013-03-23 12:17:28.625789'
+    - '2013-03-23 14:37:22.680825'
+  - - 7
+    - 4
+    - Side Body
+    - ''
+    - 1
+    - '2013-03-23 12:17:28.630961'
+    - '2013-03-23 14:37:22.684216'
+  - - 8
+    - 1
+    - promoted
+    - "<a href=\"#\">\r\n            <img src=\"/assets/promowany.jpg\" />\r\n </a>
+      \ "
+    - 1
+    - '2013-03-23 14:05:25.751678'
+    - '2013-03-23 14:37:28.606218'
+  - - 9
+    - 1
+    - Promoted
+    - "<a href=\"#\">\r\n            <img src=\"/assets/promowany.jpg\" />\r\n </a>
+      \ "
+    - 2
+    - '2013-03-23 14:07:33.273752'
+    - '2013-03-23 14:37:28.609460'
+  - - 14
+    - 7
+    - Body
+    - ''
+    - 0
+    - '2013-03-23 14:59:57.206870'
+    - '2013-04-06 11:53:28.664672'
+  - - 15
+    - 7
+    - Side Body
+    - ''
+    - 1
+    - '2013-03-23 14:59:57.211531'
+    - '2013-04-06 11:53:28.737262'
+  - - 16
+    - 8
+    - Body
+    - "<p>This is just a standard text page example. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Proin metus dolor, hendrerit sit amet, aliquet nec, posuere
+      sed, purus. Nullam et velit iaculis odio sagittis placerat. Duis metus tellus,
+      pellentesque ut, luctus id, egestas a, lorem. Praesent vitae mauris. Aliquam
+      sed nulla. Sed id nunc vitae leo suscipit viverra. Proin at leo ut lacus consequat
+      rhoncus. In hac habitasse platea dictumst. Nunc quis tortor sed libero hendrerit
+      dapibus.\r\n\r\nInteger interdum purus id erat. Duis nec velit vitae dolor mattis
+      euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+      per inceptos himenaeos. Suspendisse pellentesque dignissim lacus. Nulla semper
+      euismod arcu. Suspendisse egestas, erat a consectetur dapibus, felis orci cursus
+      eros, et sollicitudin purus urna et metus. Integer eget est sed nunc euismod
+      vestibulum. Integer nulla dui, tristique in, euismod et, interdum imperdiet,
+      enim. Mauris at lectus. Sed egestas tortor nec mi.</p>"
+    - 0
+    - '2013-03-23 15:22:27.458865'
+    - '2013-03-23 16:47:00.383591'
+  - - 17
+    - 8
+    - Side Body
+    - <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla
+      nisi a elit. Duis ultricies orci ut arcu. Ut ac nibh. Duis blandit rhoncus magna.
+      Pellentesque semper risus ut magna. Etiam pulvinar tellus eget diam. Morbi blandit.
+      Donec pulvinar mauris at ligula. Sed pellentesque, ipsum id congue molestie,
+      lectus risus egestas pede, ac viverra diam lacus ac urna. Aenean elit.</p>
+    - 1
+    - '2013-03-23 15:22:27.591813'
+    - '2013-03-23 16:47:00.390047'
+  - - 24
+    - 12
+    - Body
+    - ''
+    - 0
+    - '2013-04-06 11:53:38.472949'
+    - '2013-04-06 14:11:10.871289'
+  - - 25
+    - 12
+    - Side Body
+    - ''
+    - 1
+    - '2013-04-06 11:53:38.478628'
+    - '2013-04-06 14:11:10.876628'
+
+---
+refinery_pages:
+  columns:
+  - id
+  - parent_id
+  - path
+  - slug
+  - show_in_menu
+  - link_url
+  - menu_match
+  - deletable
+  - draft
+  - skip_to_first_child
+  - lft
+  - rgt
+  - depth
+  - view_template
+  - layout_template
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 
+    - 
+    - home
+    - false
+    - /
+    - ^/$
+    - false
+    - false
+    - false
+    - 1
+    - 4
+    - 0
+    - show
+    - 
+    - '2013-03-23 11:37:44.717269'
+    - '2013-03-23 15:25:17.614776'
+  - - 2
+    - 1
+    - 
+    - page-not-found
+    - false
+    - 
+    - ^/404$
+    - false
+    - false
+    - false
+    - 2
+    - 3
+    - 1
+    - 
+    - 
+    - '2013-03-23 11:37:45.510736'
+    - '2013-03-23 15:25:17.845621'
+  - - 4
+    - 
+    - 
+    - news
+    - false
+    - /news
+    - 
+    - true
+    - false
+    - false
+    - 5
+    - 6
+    - 0
+    - show
+    - 
+    - '2013-03-23 12:17:28.616603'
+    - '2013-03-23 14:37:22.666095'
+  - - 7
+    - 
+    - 
+    - kino
+    - true
+    - /events/kino
+    - 
+    - true
+    - false
+    - false
+    - 7
+    - 8
+    - 0
+    - events
+    - 
+    - '2013-03-23 14:59:57.198269'
+    - '2013-04-06 11:53:28.657272'
+  - - 8
+    - 
+    - 
+    - o-nas
+    - true
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 9
+    - 10
+    - 0
+    - show
+    - 
+    - '2013-03-23 15:22:27.245220'
+    - '2013-03-23 16:47:00.376866'
+  - - 12
+    - 
+    - 
+    - events
+    - false
+    - /events
+    - 
+    - true
+    - false
+    - false
+    - 11
+    - 12
+    - 0
+    - show
+    - 
+    - '2013-04-06 11:53:38.428161'
+    - '2013-04-06 14:11:10.864061'
+
+---
+refinery_page_part_translations:
+  columns:
+  - id
+  - refinery_page_part_id
+  - locale
+  - body
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - en
+    - <p><img src="/system/images/W1siZiIsIjIwMTMvMDMvMjMvMTNfMDBfMDNfMzYwXzY0NjkxXzI5MTMyMzc2NDMyMjk2NV8xNTM2NjEyMTMwX24uanBnIl0sWyJwIiwidGh1bWIiLCIyMjV4MjU1PiJdXQ/64691_291323764322965_1536612130_n.jpg"
+      title="64691 291323764322965 1536612130 N" alt="64691 291323764322965 1536612130
+      N" rel="225x255" width="225" height="169" class="selected_by_wym image-align-left"
+      />Welcome to our site. This is just a place holder page while we gather our
+      content.</p>
+    - '2013-03-23 11:37:45.152303'
+    - '2013-03-23 12:00:09.769221'
+  - - 3
+    - 3
+    - en
+    - <h2>Sorry, there was a problem...</h2><p>The page you requested was not found.</p><p><a
+      href='/'>Return to the home page</a></p>
+    - '2013-03-23 11:37:45.714474'
+    - '2013-03-23 11:37:45.714474'
+  - - 6
+    - 6
+    - en
+    - ''
+    - '2013-03-23 12:17:28.628835'
+    - '2013-03-23 12:45:58.526635'
+  - - 7
+    - 7
+    - en
+    - ''
+    - '2013-03-23 12:17:28.633576'
+    - '2013-03-23 12:45:58.531059'
+  - - 8
+    - 8
+    - en
+    - "<a href=\"#\">\r\n            <img src=\"/assets/promowany.jpg\" />\r\n </a>
+      \ "
+    - '2013-03-23 14:05:25.754816'
+    - '2013-03-23 14:05:25.754816'
+  - - 9
+    - 9
+    - en
+    - "<a href=\"#\">\r\n            <img src=\"/assets/promowany.jpg\" />\r\n </a>
+      \ "
+    - '2013-03-23 14:07:33.276683'
+    - '2013-03-23 14:07:33.276683'
+  - - 14
+    - 14
+    - en
+    - ''
+    - '2013-03-23 14:59:57.209520'
+    - '2013-03-23 14:59:57.209520'
+  - - 15
+    - 15
+    - en
+    - ''
+    - '2013-03-23 14:59:57.213963'
+    - '2013-03-23 14:59:57.213963'
+  - - 16
+    - 16
+    - en
+    - |-
+      <p>This is just a standard text page example. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus dolor, hendrerit sit amet, aliquet nec, posuere sed, purus. Nullam et velit iaculis odio sagittis placerat. Duis metus tellus, pellentesque ut, luctus id, egestas a, lorem. Praesent vitae mauris. Aliquam sed nulla. Sed id nunc vitae leo suscipit viverra. Proin at leo ut lacus consequat rhoncus. In hac habitasse platea dictumst. Nunc quis tortor sed libero hendrerit dapibus.
+
+      Integer interdum purus id erat. Duis nec velit vitae dolor mattis euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse pellentesque dignissim lacus. Nulla semper euismod arcu. Suspendisse egestas, erat a consectetur dapibus, felis orci cursus eros, et sollicitudin purus urna et metus. Integer eget est sed nunc euismod vestibulum. Integer nulla dui, tristique in, euismod et, interdum imperdiet, enim. Mauris at lectus. Sed egestas tortor nec mi.</p>
+    - '2013-03-23 15:22:27.468973'
+    - '2013-03-23 15:22:27.468973'
+  - - 17
+    - 17
+    - en
+    - <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla
+      nisi a elit. Duis ultricies orci ut arcu. Ut ac nibh. Duis blandit rhoncus magna.
+      Pellentesque semper risus ut magna. Etiam pulvinar tellus eget diam. Morbi blandit.
+      Donec pulvinar mauris at ligula. Sed pellentesque, ipsum id congue molestie,
+      lectus risus egestas pede, ac viverra diam lacus ac urna. Aenean elit.</p>
+    - '2013-03-23 15:22:27.594708'
+    - '2013-03-23 15:22:27.594708'
+  - - 24
+    - 14
+    - pl
+    - ''
+    - '2013-03-23 16:46:35.487264'
+    - '2013-03-23 16:46:35.489687'
+  - - 25
+    - 15
+    - pl
+    - ''
+    - '2013-03-23 16:46:35.493802'
+    - '2013-03-23 16:46:35.496064'
+  - - 26
+    - 16
+    - pl
+    - "<p>This is just a standard text page example. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Proin metus dolor, hendrerit sit amet, aliquet nec, posuere
+      sed, purus. Nullam et velit iaculis odio sagittis placerat. Duis metus tellus,
+      pellentesque ut, luctus id, egestas a, lorem. Praesent vitae mauris. Aliquam
+      sed nulla. Sed id nunc vitae leo suscipit viverra. Proin at leo ut lacus consequat
+      rhoncus. In hac habitasse platea dictumst. Nunc quis tortor sed libero hendrerit
+      dapibus.\r\n\r\nInteger interdum purus id erat. Duis nec velit vitae dolor mattis
+      euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+      per inceptos himenaeos. Suspendisse pellentesque dignissim lacus. Nulla semper
+      euismod arcu. Suspendisse egestas, erat a consectetur dapibus, felis orci cursus
+      eros, et sollicitudin purus urna et metus. Integer eget est sed nunc euismod
+      vestibulum. Integer nulla dui, tristique in, euismod et, interdum imperdiet,
+      enim. Mauris at lectus. Sed egestas tortor nec mi.</p>"
+    - '2013-03-23 16:47:00.385628'
+    - '2013-03-23 16:47:00.387838'
+  - - 27
+    - 17
+    - pl
+    - <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla
+      nisi a elit. Duis ultricies orci ut arcu. Ut ac nibh. Duis blandit rhoncus magna.
+      Pellentesque semper risus ut magna. Etiam pulvinar tellus eget diam. Morbi blandit.
+      Donec pulvinar mauris at ligula. Sed pellentesque, ipsum id congue molestie,
+      lectus risus egestas pede, ac viverra diam lacus ac urna. Aenean elit.</p>
+    - '2013-03-23 16:47:00.391762'
+    - '2013-03-23 16:47:00.393739'
+  - - 30
+    - 24
+    - pl
+    - ''
+    - '2013-04-06 11:53:38.476398'
+    - '2013-04-06 11:53:38.476398'
+  - - 31
+    - 25
+    - pl
+    - ''
+    - '2013-04-06 11:53:38.481324'
+    - '2013-04-06 11:53:38.481324'
+
+---
+refinery_page_translations:
+  columns:
+  - id
+  - refinery_page_id
+  - locale
+  - title
+  - custom_slug
+  - menu_title
+  - slug
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - en
+    - Home
+    - 
+    - ''
+    - home
+    - '2013-03-23 11:37:44.467550'
+    - '2013-03-23 12:00:09.763068'
+  - - 2
+    - 2
+    - en
+    - Page not found
+    - 
+    - 
+    - page-not-found
+    - '2013-03-23 11:37:45.506521'
+    - '2013-03-23 11:37:45.514567'
+  - - 4
+    - 4
+    - en
+    - News
+    - 
+    - news
+    - news
+    - '2013-03-23 12:17:28.612127'
+    - '2013-03-23 12:21:08.298302'
+  - - 7
+    - 7
+    - en
+    - Kino
+    - 
+    - ''
+    - kino
+    - '2013-03-23 14:59:57.195296'
+    - '2013-03-23 14:59:57.202073'
+  - - 8
+    - 8
+    - en
+    - About
+    - 
+    - 
+    - about
+    - '2013-03-23 15:22:27.229138'
+    - '2013-03-23 15:22:27.250358'
+  - - 12
+    - 7
+    - pl
+    - Kino
+    - 
+    - ''
+    - kino
+    - '2013-03-23 16:46:35.466454'
+    - '2013-04-04 14:08:38.244248'
+  - - 13
+    - 8
+    - pl
+    - O nas
+    - 
+    - ''
+    - o-nas
+    - '2013-03-23 16:47:00.142560'
+    - '2013-03-23 16:47:00.380349'
+  - - 15
+    - 12
+    - pl
+    - Events
+    - 
+    - ''
+    - events
+    - '2013-04-06 11:53:38.423325'
+    - '2013-04-06 11:53:38.432210'
+
+---
+refinery_images:
+  columns:
+  - id
+  - image_mime_type
+  - image_name
+  - image_size
+  - image_width
+  - image_height
+  - image_uid
+  - image_ext
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - image/jpeg
+    - 64691_291323764322965_1536612130_n.jpg
+    - 49025
+    - 960
+    - 720
+    - 2013/03/23/13_00_03_360_64691_291323764322965_1536612130_n.jpg
+    - 
+    - '2013-03-23 12:00:03.363264'
+    - '2013-03-23 12:00:03.363264'
+
+---
+seo_meta:
+  columns:
+  - id
+  - seo_meta_id
+  - seo_meta_type
+  - browser_title
+  - meta_keywords
+  - meta_description
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - Refinery::Page::Translation
+    - ''
+    - ''
+    - ''
+    - '2013-03-23 11:37:44.714424'
+    - '2013-03-23 12:00:09.723681'
+  - - 2
+    - 2
+    - Refinery::Page::Translation
+    - 
+    - 
+    - 
+    - '2013-03-23 11:37:45.508838'
+    - '2013-03-23 11:37:45.508838'
+  - - 4
+    - 4
+    - Refinery::Page::Translation
+    - ''
+    - ''
+    - ''
+    - '2013-03-23 12:17:28.613721'
+    - '2013-03-23 13:59:25.979323'
+  - - 7
+    - 7
+    - Refinery::Page::Translation
+    - ''
+    - ''
+    - ''
+    - '2013-03-23 14:59:57.196644'
+    - '2013-03-23 14:59:57.196644'
+  - - 8
+    - 8
+    - Refinery::Page::Translation
+    - 
+    - 
+    - 
+    - '2013-03-23 15:22:27.242057'
+    - '2013-03-23 15:22:27.242057'
+  - - 12
+    - 12
+    - Refinery::Page::Translation
+    - ''
+    - ''
+    - ''
+    - '2013-03-23 16:46:35.468241'
+    - '2013-03-23 16:46:35.468241'
+  - - 13
+    - 13
+    - Refinery::Page::Translation
+    - ''
+    - ''
+    - ''
+    - '2013-03-23 16:47:00.143908'
+    - '2013-03-23 16:47:00.143908'
+  - - 15
+    - 15
+    - Refinery::Page::Translation
+    - ''
+    - ''
+    - ''
+    - '2013-04-06 11:53:38.425129'
+    - '2013-04-06 11:53:38.425129'
+
+---
+refinery_news_item_translations:
+  columns:
+  - id
+  - refinery_news_item_id
+  - locale
+  - title
+  - body
+  - created_at
+  - updated_at
+  - source
+  records: 
+  - - 1
+    - 1
+    - en
+    - English news
+    - "<p><img src=\"/system/images/W1siZiIsIjIwMTMvMDMvMjMvMTNfMDBfMDNfMzYwXzY0NjkxXzI5MTMyMzc2NDMyMjk2NV8xNTM2NjEyMTMwX24uanBnIl0sWyJwIiwidGh1bWIiLCIyMjV4MjU1PiJdXQ/64691_291323764322965_1536612130_n.jpg\"
+      title=\"64691 291323764322965 1536612130 N\" alt=\"64691 291323764322965 1536612130
+      N\" rel=\"225x255\" width=\"225\" height=\"169\" class=\"selected_by_wym image-align-left\"
+      />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies
+      aliquet nunc in egestas. Mauris interdum odio vitae turpis imperdiet lobortis.
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+      himenaeos. Curabitur lacinia dolor a neque congue a suscipit magna mollis. Aliquam
+      id diam ut velit vehicula placerat. Curabitur ultrices pretium elit, quis ullamcorper
+      metus consectetur placerat. Nunc consectetur cursus dui, id lacinia diam semper
+      at. Maecenas cursus vulputate felis vitae luctus. Aenean sed purus felis, vitae
+      semper nulla. Nulla mollis consequat neque vitae posuere. Nunc adipiscing arcu
+      ac metus venenatis lacinia. Fusce convallis, orci sodales accumsan blandit,
+      mauris arcu pellentesque sem, non rhoncus ligula diam ut urna.</p>\r\n<p>Mauris
+      porta erat eget eros tempus et convallis augue ultrices. Sed vel faucibus augue.
+      Sed commodo sollicitudin leo, sit amet luctus mauris fermentum sit amet. Nam
+      ullamcorper sodales purus, ut pellentesque ligula vulputate eu. Duis consequat
+      diam a sem accumsan ut rhoncus turpis aliquam. In at odio felis. Integer lectus
+      odio, dignissim nec ornare at, sagittis luctus dui. Duis nec nisi libero.</p>\r\n<p>Quisque
+      arcu nunc, cursus vehicula adipiscing et, auctor eget massa. Fusce nisi dui,
+      aliquet in blandit nec, vehicula quis risus. Phasellus condimentum auctor est,
+      vitae imperdiet nisl sollicitudin sit amet. Fusce in lacus odio, id gravida
+      velit. Suspendisse hendrerit pharetra libero at mollis. Duis ac ullamcorper
+      mauris. Phasellus convallis urna ac erat bibendum eu rutrum libero ullamcorper.
+      Cras a lectus arcu, a semper leo. Donec et ipsum eros, id scelerisque felis.</p>\r\n<p>Nulla
+      eros lorem, hendrerit ut facilisis vel, mollis quis lectus. Vivamus tincidunt
+      lorem quis eros tempus tincidunt. Praesent tempor purus at erat scelerisque
+      suscipit. Vivamus malesuada, tortor vitae volutpat lacinia, arcu nibh ultricies
+      diam, nec sollicitudin ipsum mi nec ante. Integer eu malesuada mauris. Maecenas
+      libero dui, posuere aliquam posuere pellentesque, tincidunt in tortor. Nulla
+      nibh odio, fermentum at consectetur vitae, pharetra quis lorem. Duis sed nulla
+      lorem. Pellentesque accumsan, libero ac ultricies malesuada, diam arcu congue
+      elit, auctor tincidunt magna lacus non erat. Duis rhoncus, quam eu dictum rhoncus,
+      nisl lacus venenatis metus, eu elementum metus elit sit amet turpis. Etiam luctus
+      lacus nec dolor eleifend ullamcorper sagittis ligula aliquet.</p>\r\n<p>Nunc
+      rhoncus orci ipsum. Sed elementum sapien ac tortor tristique vitae tristique
+      velit dignissim. Sed sed lorem ac eros consectetur fringilla eu ac tellus. Suspendisse
+      sagittis mauris eget orci ullamcorper mollis. Nullam hendrerit, tortor quis
+      lacinia adipiscing, dolor odio ullamcorper purus, id aliquam mi urna vitae orci.
+      Vivamus dignissim mi sit amet dui sagittis at adipiscing nibh mollis. Suspendisse
+      potenti. Nullam vitae diam a felis vestibulum auctor vel vitae libero. Nullam
+      risus ligula, interdum eget ultrices sed, lobortis sed elit. Pellentesque ullamcorper
+      vestibulum interdum. Nunc quis tempus nibh. Fusce scelerisque lectus quis enim
+      ornare nec aliquet diam pellentesque. Etiam eu faucibus mauris.</p>"
+    - '2013-03-23 11:43:50.757200'
+    - '2013-03-23 12:00:28.973195'
+    - 
+  - - 2
+    - 2
+    - en
+    - Another news
+    - <p>blahLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies
+      aliquet nunc in egestas. Mauris interdum odio vitae turpis imperdiet lobortis.
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+      himenaeos. Curabitur lacinia dolor a neque congue a suscipit magna mollis. Aliquam
+      id diam ut velit vehicula placerat. Curabitur ultrices pretium elit, quis ullamcorper
+      metus consectetur placerat. Nunc consectetur cursus dui, id lacinia diam semper
+      at. Maecenas cursus vulputate felis vitae luctus. Aenean sed purus felis, vitae
+      semper nulla. Nulla mollis consequat neque vitae posuere. Nunc adipiscing arcu
+      ac metus venenatis lacinia. Fusce convallis, orci sodales accumsan blandit,
+      mauris arcu pellentesque sem, non rhoncus ligula diam ut urna.<br />Mauris porta
+      erat eget eros tempus et convallis augue ultrices. Sed vel faucibus augue. Sed
+      commodo sollicitudin leo, sit amet luctus mauris fermentum sit amet. Nam ullamcorper
+      sodales purus, ut pellentesque ligula vulputate eu. Duis consequat diam a sem
+      accumsan ut rhoncus turpis aliquam. In at odio felis. Integer lectus odio, dignissim
+      nec ornare at, sagittis luctus dui. Duis nec nisi libero.<br />Quisque arcu
+      nunc, cursus vehicula adipiscing et, auctor eget massa. Fusce nisi dui, aliquet
+      in blandit nec, vehicula quis risus. Phasellus condimentum auctor est, vitae
+      imperdiet nisl sollicitudin sit amet. Fusce in lacus odio, id gravida velit.
+      Suspendisse hendrerit pharetra libero at mollis. Duis ac ullamcorper mauris.
+      Phasellus convallis urna ac erat bibendum eu rutrum libero ullamcorper. Cras
+      a lectus arcu, a semper leo. Donec et ipsum eros, id scelerisque felis.</p>
+    - '2013-03-23 13:45:40.546234'
+    - '2013-03-23 13:47:11.548732'
+    - 
+  - - 3
+    - 2
+    - pl
+    - Another news
+    - <p>blahLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies
+      aliquet nunc in egestas. Mauris interdum odio vitae turpis imperdiet lobortis.
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+      himenaeos. Curabitur lacinia dolor a neque congue a suscipit magna mollis. Aliquam
+      id diam ut velit vehicula placerat. Curabitur ultrices pretium elit, quis ullamcorper
+      metus consectetur placerat. Nunc consectetur cursus dui, id lacinia diam semper
+      at. Maecenas cursus vulputate felis vitae luctus. Aenean sed purus felis, vitae
+      semper nulla. Nulla mollis consequat neque vitae posuere. Nunc adipiscing arcu
+      ac metus venenatis lacinia. Fusce convallis, orci sodales accumsan blandit,
+      mauris arcu pellentesque sem, non rhoncus ligula diam ut urna.<br />Mauris porta
+      erat eget eros tempus et convallis augue ultrices. Sed vel faucibus augue. Sed
+      commodo sollicitudin leo, sit amet luctus mauris fermentum sit amet. Nam ullamcorper
+      sodales purus, ut pellentesque ligula vulputate eu. Duis consequat diam a sem
+      accumsan ut rhoncus turpis aliquam. In at odio felis. Integer lectus odio, dignissim
+      nec ornare at, sagittis luctus dui. Duis nec nisi libero.<br />Quisque arcu
+      nunc, cursus vehicula adipiscing et, auctor eget massa. Fusce nisi dui, aliquet
+      in blandit nec, vehicula quis risus. Phasellus condimentum auctor est, vitae
+      imperdiet nisl sollicitudin sit amet. Fusce in lacus odio, id gravida velit.
+      Suspendisse hendrerit pharetra libero at mollis. Duis ac ullamcorper mauris.
+      Phasellus convallis urna ac erat bibendum eu rutrum libero ullamcorper. Cras
+      a lectus arcu, a semper leo. Donec et ipsum eros, id scelerisque felis.</p>
+    - '2013-03-23 15:29:20.646963'
+    - '2013-03-23 15:29:29.888886'
+    - 
+  - - 4
+    - 1
+    - pl
+    - News po polsku
+    - '<p><img src="/system/images/W1siZiIsIjIwMTMvMDMvMjMvMTNfMDBfMDNfMzYwXzY0NjkxXzI5MTMyMzc2NDMyMjk2NV8xNTM2NjEyMTMwX24uanBnIl0sWyJwIiwidGh1bWIiLCIyMjV4MjU1PiJdXQ/64691_291323764322965_1536612130_n.jpg"
+      title="64691 291323764322965 1536612130 N" alt="64691 291323764322965 1536612130
+      N" rel="225x255" width="225" height="169" class="image-align-left" />Litwo!
+      Ojczyzno moja! Ty jesteś jak zdrowie. Ile cię trzeba cenić, ten zaszczyt należy.
+      Idąc z urzędu ten odwiązywać, składać. Właśnie dwukonną bryką wjechał młody
+      ja Ruski, teraz jeśli równie kłaść na sklepieniu. Goście weszli w całej ozdobi
+      widzę i majątek bratni wszystko przepasane, jakby czyjegoś przyjścia był żonaty
+      a od obywateli. I przyjezdny gość, krewny Horeszków daleki przyjechawszy z urzędu
+      ten odwiązywać, składać. Właśnie tym obrazem. Właśnie dwukonną bryką wjechał
+      młody panek i dobra, które mógłby spójrzeć bez grzeczności i dalej drzeć pazurami,
+      a mój sąsiedzie i przepraszał Sędziego. Sędzia na wielkim mieście miał głos
+      miły: Witaj nam, kolego! lecz stało w spadku po polsku umiem ojczyzna! Ja nie
+      chciałby do włosów, włosy pozwijane w kuca. Obaczcież, co o autorów pytała Tadeusza
+      wsparła się w czasie krajowych urzędów przynajmniej tom skorzystał, że ważny
+      i świadki. I też same szczypiąc trawę ciągnęły powoli pod Twoją opiek ofiarowany,
+      martwą podniosłem powiek i mami. Już konie gości przeprosić i gdzie chce, wchodzi
+      byle nie czytano w porządku. naprzód dzieci mało przejmował zwyczaj, którym
+      ogień płonął. Również patrzyła ona, i kończył nauki, końca.</p>'
+    - '2013-04-03 15:54:54.222089'
+    - '2013-04-03 15:55:45.220052'
+    - 
+
+---
+refinery_news_items:
+  columns:
+  - id
+  - title
+  - body
+  - publish_date
+  - created_at
+  - updated_at
+  - image_id
+  - expiration_date
+  - source
+  - slug
+  records: 
+  - - 1
+    - News po polsku
+    - '<p><img src="/system/images/W1siZiIsIjIwMTMvMDMvMjMvMTNfMDBfMDNfMzYwXzY0NjkxXzI5MTMyMzc2NDMyMjk2NV8xNTM2NjEyMTMwX24uanBnIl0sWyJwIiwidGh1bWIiLCIyMjV4MjU1PiJdXQ/64691_291323764322965_1536612130_n.jpg"
+      title="64691 291323764322965 1536612130 N" alt="64691 291323764322965 1536612130
+      N" rel="225x255" width="225" height="169" class="image-align-left" />Litwo!
+      Ojczyzno moja! Ty jesteś jak zdrowie. Ile cię trzeba cenić, ten zaszczyt należy.
+      Idąc z urzędu ten odwiązywać, składać. Właśnie dwukonną bryką wjechał młody
+      ja Ruski, teraz jeśli równie kłaść na sklepieniu. Goście weszli w całej ozdobi
+      widzę i majątek bratni wszystko przepasane, jakby czyjegoś przyjścia był żonaty
+      a od obywateli. I przyjezdny gość, krewny Horeszków daleki przyjechawszy z urzędu
+      ten odwiązywać, składać. Właśnie tym obrazem. Właśnie dwukonną bryką wjechał
+      młody panek i dobra, które mógłby spójrzeć bez grzeczności i dalej drzeć pazurami,
+      a mój sąsiedzie i przepraszał Sędziego. Sędzia na wielkim mieście miał głos
+      miły: Witaj nam, kolego! lecz stało w spadku po polsku umiem ojczyzna! Ja nie
+      chciałby do włosów, włosy pozwijane w kuca. Obaczcież, co o autorów pytała Tadeusza
+      wsparła się w czasie krajowych urzędów przynajmniej tom skorzystał, że ważny
+      i świadki. I też same szczypiąc trawę ciągnęły powoli pod Twoją opiek ofiarowany,
+      martwą podniosłem powiek i mami. Już konie gości przeprosić i gdzie chce, wchodzi
+      byle nie czytano w porządku. naprzód dzieci mało przejmował zwyczaj, którym
+      ogień płonął. Również patrzyła ona, i kończył nauki, końca.</p>'
+    - '2013-03-23 11:43:00.000000'
+    - '2013-03-23 11:43:50.743710'
+    - '2013-04-03 15:55:45.216724'
+    - 
+    - 
+    - ''
+    - news-po-polsku
+  - - 2
+    - Another news
+    - <p>blahLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies
+      aliquet nunc in egestas. Mauris interdum odio vitae turpis imperdiet lobortis.
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+      himenaeos. Curabitur lacinia dolor a neque congue a suscipit magna mollis. Aliquam
+      id diam ut velit vehicula placerat. Curabitur ultrices pretium elit, quis ullamcorper
+      metus consectetur placerat. Nunc consectetur cursus dui, id lacinia diam semper
+      at. Maecenas cursus vulputate felis vitae luctus. Aenean sed purus felis, vitae
+      semper nulla. Nulla mollis consequat neque vitae posuere. Nunc adipiscing arcu
+      ac metus venenatis lacinia. Fusce convallis, orci sodales accumsan blandit,
+      mauris arcu pellentesque sem, non rhoncus ligula diam ut urna.<br />Mauris porta
+      erat eget eros tempus et convallis augue ultrices. Sed vel faucibus augue. Sed
+      commodo sollicitudin leo, sit amet luctus mauris fermentum sit amet. Nam ullamcorper
+      sodales purus, ut pellentesque ligula vulputate eu. Duis consequat diam a sem
+      accumsan ut rhoncus turpis aliquam. In at odio felis. Integer lectus odio, dignissim
+      nec ornare at, sagittis luctus dui. Duis nec nisi libero.<br />Quisque arcu
+      nunc, cursus vehicula adipiscing et, auctor eget massa. Fusce nisi dui, aliquet
+      in blandit nec, vehicula quis risus. Phasellus condimentum auctor est, vitae
+      imperdiet nisl sollicitudin sit amet. Fusce in lacus odio, id gravida velit.
+      Suspendisse hendrerit pharetra libero at mollis. Duis ac ullamcorper mauris.
+      Phasellus convallis urna ac erat bibendum eu rutrum libero ullamcorper. Cras
+      a lectus arcu, a semper leo. Donec et ipsum eros, id scelerisque felis.</p>
+    - '2013-03-23 13:45:00.000000'
+    - '2013-03-23 13:45:40.480467'
+    - '2013-03-23 15:29:29.885323'
+    - 
+    - 
+    - ''
+    - another-news
+
+---
+refinery_events:
+  columns:
+  - id
+  - name
+  - info
+  - description
+  - date
+  - hours
+  - type_id
+  - position
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Władca Pierścieni
+    - reż. Peter Jackson
+    - <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque
+      dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur
+      et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat
+      a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis.
+      Nulla imperdiet&#160;Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse
+      a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada
+      ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum
+      commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor.
+      Pellentesque facilisis. Nulla imperdiet Lorem ipsum dolor sit amet enim. Etiam
+      ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+      lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+      porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus
+      fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet </p>
+    - '2013-04-04 15:29:00.000000'
+    - godz. 11 i 12
+    - 1
+    - 0
+    - '2013-03-23 15:30:10.391549'
+    - '2013-04-04 14:29:03.838802'
+  - - 2
+    - Dupa
+    - dupa
+    - <p>dupa</p>
+    - '2013-04-01 15:46:00.000000'
+    - ''
+    - 1
+    - 1
+    - '2013-04-05 15:46:18.901280'
+    - '2013-04-05 15:46:18.901280'
+  - - 3
+    - Trzecie
+    - wydarzenoe
+    - "<p>asdasdasd</p>\r\n<p>asd</p>\r\n<p>asd</p>"
+    - '2013-04-06 14:06:00.000000'
+    - ''
+    - 1
+    - 2
+    - '2013-04-06 14:06:21.824452'
+    - '2013-04-06 14:08:33.454162'
+  - - 4
+    - Teatr
+    - tear
+    - ''
+    - '2013-04-06 14:09:00.000000'
+    - ''
+    - 2
+    - 3
+    - '2013-04-06 14:10:11.779332'
+    - '2013-04-06 14:10:11.779332'
+
+---
+refinery_event_translations:
+  columns:
+  - id
+  - refinery_event_id
+  - locale
+  - name
+  - info
+  - description
+  - hours
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - pl
+    - Władca Pierścieni
+    - reż. Peter Jackson
+    - <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque
+      dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur
+      et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat
+      a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis.
+      Nulla imperdiet&#160;Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse
+      a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada
+      ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum
+      commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor.
+      Pellentesque facilisis. Nulla imperdiet Lorem ipsum dolor sit amet enim. Etiam
+      ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit
+      lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+      porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus
+      fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet </p>
+    - godz. 11 i 12
+    - '2013-03-23 15:30:10.404188'
+    - '2013-04-04 14:29:03.842321'
+  - - 2
+    - 2
+    - pl
+    - Dupa
+    - dupa
+    - <p>dupa</p>
+    - ''
+    - '2013-04-05 15:46:18.906406'
+    - '2013-04-05 15:46:18.906406'
+  - - 3
+    - 3
+    - pl
+    - Trzecie
+    - wydarzenoe
+    - "<p>asdasdasd</p>\r\n<p>asd</p>\r\n<p>asd</p>"
+    - ''
+    - '2013-04-06 14:06:21.829019'
+    - '2013-04-06 14:06:21.829019'
+  - - 4
+    - 4
+    - pl
+    - Teatr
+    - tear
+    - ''
+    - ''
+    - '2013-04-06 14:10:11.782780'
+    - '2013-04-06 14:10:11.782780'
+
+---
+refinery_events_types:
+  columns:
+  - id
+  - name
+  - position
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Movie
+    - 0
+    - '2013-03-23 15:31:02.506584'
+    - '2013-03-23 15:31:08.105137'
+  - - 2
+    - Dupablada
+    - 
+    - '2013-03-23 16:03:43.966517'
+    - '2013-03-23 16:15:14.031962'
+
+---
+refinery_events_type_translations:
+  columns:
+  - id
+  - refinery_events_type_id
+  - locale
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - pl
+    - Kino
+    - '2013-03-23 15:31:02.518506'
+    - '2013-03-23 15:31:02.518506'
+  - - 2
+    - 1
+    - en
+    - Movie
+    - '2013-03-23 15:31:08.110833'
+    - '2013-03-23 15:31:08.113206'
+  - - 3
+    - 2
+    - pl
+    - Dupablada
+    - '2013-03-23 16:03:43.970500'
+    - '2013-03-23 16:03:43.970500'
+  - - 4
+    - 2
+    - en
+    - Paleass
+    - '2013-03-23 16:15:08.555472'
+    - '2013-03-23 16:15:08.561306'

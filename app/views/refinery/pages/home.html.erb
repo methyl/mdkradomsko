@@ -104,12 +104,11 @@ mu kultury? Wpisz Twój e-mail i kliknij „Zapisz”.
         </form>
       </aside>
       
-      <aside id="calendar">
-        <h5>Kalendarium imprez</h5>
-        <a href="#" class="more shadow">Zobacz Archiwum</a>
-        <div class="box-calendar">
+      
+<!--         <div class="box-calendar">
           <a href="#"><%= image_tag 'kalendarium.jpg', size: '348x208', alt: 'Kalendarium imprez MDK' %></a>
-        </div>
+        </div> -->
+        <%= render :partial => '/refinery/events/events/calendar' %>
       </aside>
       
     </div>

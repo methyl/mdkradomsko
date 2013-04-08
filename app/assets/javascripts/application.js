@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require rubyJs
 //= require flexie
 //= require scrollTo
 //= require scroller
+//= require glDatePicker
+//= require events_calendar

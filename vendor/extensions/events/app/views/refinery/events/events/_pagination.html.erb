@@ -1,0 +1,18 @@
+<div class="all-news pagination">
+  <% if @previous_date %>
+    <% if params[:type] %>
+      <% path = refinery.by_type_date_events_events_path(params[:type], @previous_date) %>
+    <% else %>
+      <% path = refinery.by_date_events_events_path(@previous_date) %>
+    <% end %>
+    <%= link_to I18n.t('pagination.old'), path , :class => :prev %>
+  <% end %>
+  <% if @next_date %>
+    <% if params[:type] %>
+      <% path = refinery.by_type_date_events_events_path(params[:type], @next_date) %>
+    <% else %>
+      <% path = refinery.by_date_events_events_path(@next_date) %>
+    <% end %>
+    <%= link_to I18n.t('pagination.new'), path, :class => :next %>
+  <% end %>
+</div>

@@ -27,3 +27,7 @@
 #body_content.no_side_body #body {
   width: 100%;
 }
+
+aside#calendar h5 {
+  float: left;
+}

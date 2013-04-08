@@ -206,6 +206,7 @@ GEM
     warden (1.1.1)
       rack (>= 1.0)
     will_paginate (3.0.4)
+    yaml_db (0.2.3)
 
 PLATFORMS
   ruby
@@ -224,3 +225,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  yaml_db

@@ -4,11 +4,12 @@ Refinery::Core::Engine.routes.append do
   namespace :events do
     resources :events, :path => '', :only => [:index, :show] do
       collection do
+        get 'dates', :format => :json
         get 'soon'
         get 'today' 
-        get 'archive'       => 'events#archive'
-        get 'archive/:date' => 'events#archive'
-        get ':type'   => 'events#index', :constraints => {:type => /[a-z]+/}
+        get ':date'       => 'events#index', :constraints => {:date => /\d{4}-\d{2}-\d{2}/}, :as => 'by_date'
+        get ':type'       => 'events#index', :constraints => {:type => /[a-z]+/}, :as => 'by_type'
+        get ':type/:date' => 'events#index', :constraints => {:type => /[a-z]+/, :date => /\d{4}-\d{2}-\d{2}/}, :as => 'by_type_date'
       end
     end
   end

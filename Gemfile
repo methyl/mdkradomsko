@@ -14,6 +14,7 @@ end
 group :development do
   gem "capistrano"
   gem 'rvm-capistrano'
+  gem 'yaml_db'
 end
 
 

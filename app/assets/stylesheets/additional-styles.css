@@ -34,7 +34,7 @@
 
 		.show-details{
 			float:left;
-			width:147px;
+			width:170px;
 			margin-right:15px;
 			font-family:Tahoma, Geneva, sans-serif;
 			color:#000;
@@ -133,6 +133,7 @@
 	
 	.box-see{
 		margin-left:12px;
+		margin-bottom: 20px;
 		float:left;
 	}
 		#see ul{

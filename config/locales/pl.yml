@@ -1,4 +1,7 @@
 pl:
+  pagination:
+    new: 'Nowsze'
+    old: 'Starsze'
   news: 
     more: "Czytaj więcej"
     see_all: "Zobacz wszystkie"

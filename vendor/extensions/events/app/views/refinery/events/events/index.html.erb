@@ -1,3 +1,4 @@
+<% content_for :body_content_title, @page_title %>
 <% content_for :body do %>
   <section id="news" class="cinema">
     <% @events.each do |event| %>
@@ -27,10 +28,12 @@
       </section>
     <% end %>
   </section>
+  <%= render 'pagination' %>
 <% end %>
 
 <% content_for :side_body do %>
-  abc
+  <%= render 'see' %>
+  <%= render 'calendar' %>
 <% end %>
 
 <%= render '/refinery/content_page' %>
