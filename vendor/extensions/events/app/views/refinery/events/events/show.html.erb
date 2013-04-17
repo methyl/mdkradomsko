@@ -4,7 +4,7 @@
 
 <% content_for :body do %>
 <div class="show-event">
-  <div class="image"><%= image_tag @event.image.url %></div>
+  <div class="image"><%= image_tag @event.image.url if @event.image %></div>
   <div class="name"><%= @event.name %> </div>
   <%= @event.info %>
   <div class="dates">
