@@ -24,7 +24,7 @@
           </div>
           <ul>
             <% @previous_events.each_with_index do |event, i| %>
-              <li><a href="#"><%= i+1 %>. <%= event.name %></a></li>
+              <li><a href="<%= events_event_path(event) %>"><%= i+1 %>. <%= event.name %></a></li>
             <% end %>
           </ul>
         </div>
@@ -38,54 +38,13 @@
 
     </div>
     <div id="col-right">
-       <section id="promoted">
-        <h2>Promowane</h2>
-        <div class="box-promoted">
-          <%= raw @page.content_for(:promoted) %>
-        </div>       
-      </section>
+      <%= render '/refinery/events/events/promoted' %>
       
       <section id="today">
         <h2>Dzisiaj</h2>
         <%= link_to 'Zobacz wszystkie', events_events_path, :class => [:more, :shadow] %>
         <ul id="today-see">
           <%= render :partial => '/refinery/events/events/side_event', :collection => @side_events %>
-<!--           <li class="active">
-            <p class="numer"><a href="#">1.</a></p>
-            <p class="opis">
-              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900<br />
-              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
-            </p>
-          </li>
-          <li>
-            <p class="numer"><a href="#">2.</a></p>
-            <p class="opis">
-              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900<br />
-              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
-            </p>
-          </li>
-          <li>
-            <p class="numer"><a href="#">3.</a></p>
-            <p class="opis">
-              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900 <br />
-              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
-            </p>
-          </li>
-          <li>
-            <p class="numer"><a href="#">4.</a></p>
-            <p class="opis">
-              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900<br />
-              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
-            </p>
-          </li>
-          <li class="last">
-            <p class="numer"><a href="#">5.</a></p>
-            <p class="opis">
-              <a href="#"><span>KINO: </span> dn. 11. 11. 2013 r, godz. 1700 i 1900<br />
-              <span>I. Nazwisko „TYTUŁ FILMU”</span></a>
-            </p>
-          </li> -->
-          
         </ul>
       </section>
       

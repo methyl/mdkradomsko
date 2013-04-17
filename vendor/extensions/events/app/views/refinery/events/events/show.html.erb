@@ -3,55 +3,27 @@
 <% end %>
 
 <% content_for :body do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @event.name %>
-    </p>
-  </section>
-  <section>
-    <h1>Info</h1>
-    <p>
-      <%=raw @event.info %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @event.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Date</h1>
-    <p>
-      <%=raw @event.date %>
-    </p>
-  </section>
-  <section>
-    <h1>Hours</h1>
-    <p>
-      <%=raw @event.hours %>
-    </p>
-  </section>
-  <section>
-    <h1>Type</h1>
-    <p>
-      <%=raw @event.type_id %>
-    </p>
-  </section>
+<div class="show-event">
+  <div class="image"><%= image_tag @event.image.url %></div>
+  <div class="name"><%= @event.name %> </div>
+  <%= @event.info %>
+  <div class="dates">
+    <% @event.times.group_by{|t| t.time.to_date}.each do |date, times| %>
+      <strong><%= l(date) %>:</strong> <br />
+      <div class="hours"><%= times.map{|time| time.time.strftime("%H:%m")}.join(", ") %></div>
+      <br />
+    <% end %>
+  </div>
+  <div class="description">
+    <%= raw @event.description %>
+  </div>
+</div>
 <% end %>
 
 <% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="events">
-      <% @events.each do |event| %>
-        <li>
-          <%= link_to event.name, refinery.events_event_path(event) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
+  <%= render 'promoted' %>
+  <%= render 'see' %>
+  <%= render 'calendar' %>
 <% end %>
 
 <%= render '/refinery/content_page' %>

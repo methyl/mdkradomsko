@@ -1,12 +1,28 @@
 fr:
   refinery:
     plugins:
+      times:
+        title: Times
       types:
         title: Types
       events:
         title: Events
     events:
       admin:
+        times:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Time
+            reorder: Réordonner les Times
+            reorder_done: Fin de réordonnancement des Times
+          records:
+            title: Times
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Time. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Time" pour créer votre premi(er/ère) time.
+          time:
+            view_live_html: Voir ce(t/tte) time <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) time
+            delete: Supprimer définitivement ce(t/tte) time
         types:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Type
@@ -35,6 +51,9 @@ fr:
             view_live_html: Voir ce(t/tte) event <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) event
             delete: Supprimer définitivement ce(t/tte) event
+      times:
+        show:
+          other: Autres Times
       types:
         show:
           other: Autres Types
@@ -43,6 +62,9 @@ fr:
           other: Autres Events
   activerecord:
     attributes:
+      refinery/events/time:
+        time: Time
+        event_id: Event
       refinery/events/type:
         name: Name
       refinery/events/event:

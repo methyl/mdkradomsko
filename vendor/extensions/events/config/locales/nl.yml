@@ -1,12 +1,29 @@
 nl:
   refinery:
     plugins:
+      times:
+        title: Times
       types:
         title: Types
       events:
         title: Events
     events:
       admin:
+        times:
+          actions:
+            create_new: Maak een nieuwe Time
+            reorder: Wijzig de volgorde van de Times
+            reorder_done: Klaar met het wijzingen van de volgorde van de Times
+          records:
+            title: Times
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Times. Druk op 'Maak een nieuwe Time' om
+              de eerste aan te maken.
+          time:
+            view_live_html: Bekijk deze time op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze time
+            delete: Verwijder deze time voor eeuwig
         types:
           actions:
             create_new: Maak een nieuwe Type
@@ -37,6 +54,9 @@ nl:
               venster)</em>
             edit: Bewerk deze event
             delete: Verwijder deze event voor eeuwig
+      times:
+        show:
+          other: Andere Times
       types:
         show:
           other: Andere Types
@@ -45,6 +65,9 @@ nl:
           other: Andere Events
   activerecord:
     attributes:
+      refinery/events/time:
+        time: Time
+        event_id: Event
       refinery/events/type:
         name: Name
       refinery/events/event:

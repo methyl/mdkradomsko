@@ -14,3 +14,6 @@ Refinery::News::Engine.load_seed
 
 # Added by Refinery CMS Types extension
 Refinery::Events::Engine.load_seed
+
+# Added by Refinery CMS Times extension
+Refinery::Events::Engine.load_seed

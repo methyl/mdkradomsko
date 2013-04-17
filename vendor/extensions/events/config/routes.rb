@@ -36,4 +36,21 @@ Refinery::Core::Engine.routes.append do
     end
   end
 
+
+  # Frontend routes
+  namespace :events do
+    resources :times, :only => [:index, :show]
+  end
+
+  # Admin routes
+  namespace :events, :path => '' do
+    namespace :admin, :path => 'refinery/events' do
+      resources :times, :except => :show do
+        collection do
+          post :update_positions
+        end
+      end
+    end
+  end
+
 end

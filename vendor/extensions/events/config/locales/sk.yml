@@ -1,12 +1,28 @@
 sk:
   refinery:
     plugins:
+      times:
+        title: Times
       types:
         title: Types
       events:
         title: Events
     events:
       admin:
+        times:
+          actions:
+            create_new: Pridať Time
+            reorder: Preusporiadať Times
+            reorder_done: Koniec radenia Times
+          records:
+            title: Times
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Times. Kliknite na "Pridať Time"
+              pre pridanie prvého time.
+          time:
+            view_live_html: Zobraziť náhľad time<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť time
+            delete: Zmazať time
         types:
           actions:
             create_new: Pridať Type
@@ -35,6 +51,9 @@ sk:
             view_live_html: Zobraziť náhľad event<br/><em>(otvorí sa v novom okne)</em>
             edit: Upraviť event
             delete: Zmazať event
+      times:
+        show:
+          other: Daľšie Times
       types:
         show:
           other: Daľšie Types
@@ -43,6 +62,9 @@ sk:
           other: Daľšie Events
   activerecord:
     attributes:
+      refinery/events/time:
+        time: Time
+        event_id: Event
       refinery/events/type:
         name: Name
       refinery/events/event:

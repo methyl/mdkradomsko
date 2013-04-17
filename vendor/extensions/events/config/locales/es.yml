@@ -1,12 +1,29 @@
 es:
   refinery:
     plugins:
+      times:
+        title: Times
       types:
         title: Types
       events:
         title: Events
     events:
       admin:
+        times:
+          actions:
+            create_new: Crear nuevo time
+            reorder: Reordenar times
+            reorder_done: Reordenación de times completada
+          records:
+            title: Times
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay times todavía. Pulsa en "Crear nuevo Time" para crear
+              tu primer time.
+          time:
+            view_live_html: Ver este time como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este time
+            delete: Borrar este time para siempre
         types:
           actions:
             create_new: Crear nuevo type
@@ -37,6 +54,9 @@ es:
               en ventana nueva)</em>
             edit: Editar este event
             delete: Borrar este event para siempre
+      times:
+        show:
+          other: Otros times
       types:
         show:
           other: Otros types
@@ -45,6 +65,9 @@ es:
           other: Otros events
   activerecord:
     attributes:
+      refinery/events/time:
+        time: Time
+        event_id: Event
       refinery/events/type:
         name: Name
       refinery/events/event:

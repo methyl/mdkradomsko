@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require reset
+ *= require style
+ */
+
+#body_content #body {
+  width: 576px;
+  float: left;
+}
+
+#side_body {
+  width: 342px;
+  float: right;
+}
+
+#body_content.no_side_body #body {
+  width: 100%;
+}
+
+aside#calendar h5 {
+  float: left;
+}
+
+.event {
+  table {
+    min-height: 114px;
+    width: 100%;
+  }
+  td {
+    vertical-align: top;
+    text-align: left
+  }  
+  td.name {
+    width: 100%;
+    font-size: 12px;
+    position: relative;
+    h6 {
+      font-size: 24px;
+    }
+    a {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  td.image {
+    text-align: right;
+  }
+  img {
+
+    width: 150px;
+  }
+}
+
+nav ul.clearfix {
+  z-index: 3200;
+  position: absolute;
+  left: 0;
+  top: 26px;
+  background: #7d0600;
+  display: none;
+  -webkit-box-shadow: 3px 5px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 2px 2px rgba(0, 0, 0, 0.3);
+
+  li a {
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+  }
+  li:hover {
+    background-color:#640905;
+
+  }
+}
+
+div.show-event {
+  line-height: 18px;
+  div.name {
+    font-size: 22px;
+    font-weight: bold
+  }
+  div.dates {
+    margin-top: 15px;
+    .hours {
+      text-indent: 3px;
+      &:before {
+        content: '-';
+      }
+    }
+  }
+  font-size: 14px;
+  .image {
+    float: left;
+    margin-right: 10px;
+    img {
+      width: 200px;
+    }
+  }
+  p{
+    font-size: 1em;
+  }
+}

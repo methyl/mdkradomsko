@@ -1,12 +1,27 @@
 zh-CN:
   refinery:
     plugins:
+      times:
+        title: Times
       types:
         title: Types
       events:
         title: Events
     events:
       admin:
+        times:
+          actions:
+            create_new: 建立新的 Time
+            reorder: 对 Times 重新排序
+            reorder_done: 对 Times 的重新排序结束
+          records:
+            title: Times
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Times . 点击 "Add New Time" 创建一个time.
+          time:
+            view_live_html: 查看 time 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 time
+            delete: 永久删除 time
         types:
           actions:
             create_new: 建立新的 Type
@@ -33,6 +48,9 @@ zh-CN:
             view_live_html: 查看 event 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 event
             delete: 永久删除 event
+      times:
+        show:
+          other: 其他 Times
       types:
         show:
           other: 其他 Types
@@ -41,6 +59,9 @@ zh-CN:
           other: 其他 Events
   activerecord:
     attributes:
+      refinery/events/time:
+        time: Time
+        event_id: Event
       refinery/events/type:
         name: Name
       refinery/events/event:

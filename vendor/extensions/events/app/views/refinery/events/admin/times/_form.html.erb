@@ -1,0 +1,23 @@
+<%= form_for [refinery, :events_admin, @time] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @time,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :time -%>
+    <%= f.datetime_select :time  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :event_id -%>
+    <%= f.number_field :event_id  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.times.admin.times.time'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete') %>
+<% end -%>

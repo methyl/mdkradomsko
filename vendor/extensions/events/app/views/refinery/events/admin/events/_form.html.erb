@@ -40,21 +40,41 @@
   </div>
   
   <div class='field'>
-    <%= f.label :date -%>
-    <%= f.datetime_select :date  -%>
-
-  </div>
-  
-  <div class='field'>
-    <%= f.label :hours -%>
-    <%= f.text_field :hours  -%>
-
-  </div>
-  
-  <div class='field'>
     <%= f.label :type -%>
     <%= f.collection_select :type_id, Refinery::Events::Type.all, :id, :name -%>
   </div>
+
+  <div class='field'>
+    <%= f.label :promoted -%>
+    <%= f.check_box :promoted -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/refinery/admin/image_picker", :locals => {
+          :f => f,
+          :field => :image_id,
+          :image => f.object.image,
+          :toggle_image_display => false
+        } %>
+  </div>
+
+  <%= f.fields_for :times do |t| %>
+    <div class="field time">
+      <%= t.label 'Czas' %>
+      <%= t.datetime_select :time %>
+      <a href="#" data-id="<%= t.object.id %>" class="delete-time">Usuń</a>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :times, @event.times.build do |t| %>
+    <div class="field time new-time">
+      <%= t.label 'Nowy czas' %>
+      <%= t.datetime_select :time %>
+      <a href="#" data-id="<%= t.object.id %>" class="delete-new-time">Usuń</a>
+    </div>
+  <% end %>
+  <a href="#" class="new-time">Dodaj</a>
   
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
@@ -63,8 +83,60 @@
 <% end -%>
 <% content_for :javascripts do %>
   <script>
+    bind_delete = function(){
+      $('a.delete-time').click(function(e){
+        e.preventDefault()
+        id = $(e.currentTarget).data('id')
+        $.ajax({
+          url: '/refinery/events/times/' + id,
+          type: 'DELETE',
+          success: function(){
+            $(e.currentTarget).parent().remove();
+            $('input[value='+id+']').remove();
+          },
+          error: function(xhr, status, error){
+            if(error == 'Not Found'){
+              $(e.currentTarget).parent().remove();
+              $('input[value='+id+']').remove();
+              console.log(id)
+            }
+          }
+        });
+        return false;
+      });
+    }
     $(document).ready(function(){
       page_options.init(false, '', '');
+      $('a.delete-new-time').click(function(e){
+        window.lastDeletedTime = $(e.currentTarget).parent().clone()
+        $(e.currentTarget).parent().remove();
+        return false;
+      })
+      $('a.new-time').click(function(e){
+        if(window.lastDeletedTime){
+          window.lastDeletedTime.clone().insertBefore('a.new-time')
+          window.lastDeletedTime = null
+        }
+        else {
+          time = $('div.new-time').last()
+          new_time = time.clone()
+          new_time.find('select').each(function(i, select){
+            name = $(select).attr('name')
+            id = parseInt(name.match(/\[(\d)\]/)[1]) + 1
+            name = name.replace(/\[(\d)\]/, '['+id+']')
+            $(select).attr('name', name)
+          })
+          new_time.insertAfter($('div.time').last())
+        }
+        $('a.delete-new-time').click(function(e){
+          window.lastDeletedTime = $(e.currentTarget).parent().clone()
+          $(e.currentTarget).parent().remove();
+          return false;
+        })
+        return false;
+      })
+      bind_delete()
     });
+    
   </script>
 <% end %>

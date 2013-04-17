@@ -4,6 +4,6 @@ Refinery::PagesController.class_eval do
     @latest_news = @news.slice!(0)
     @side_events = Refinery::Events::Event.today
     @previous_events = Refinery::Events::Event.previous.limit(4)
-    # render :layout => 'home'
+    @promoted = Refinery::Events::Event.promoted
   end
 end

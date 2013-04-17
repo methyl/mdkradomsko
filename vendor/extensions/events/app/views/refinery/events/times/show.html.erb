@@ -1,0 +1,33 @@
+<% content_for :body_content_title do %>
+  <%= @time.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Time</h1>
+    <p>
+      <%=raw @time.time %>
+    </p>
+  </section>
+  <section>
+    <h1>Event</h1>
+    <p>
+      <%=raw @time.event_id %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="times">
+      <% @times.each do |time| %>
+        <li>
+          <%= link_to time.title, refinery.events_time_path(time) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

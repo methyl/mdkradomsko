@@ -1,12 +1,29 @@
 nb:
   refinery:
     plugins:
+      times:
+        title: Times
       types:
         title: Types
       events:
         title: Events
     events:
       admin:
+        times:
+          actions:
+            create_new: Lag en ny Time
+            reorder: Endre rekkefølgen på Times
+            reorder_done: Ferdig å endre rekkefølgen Times
+          records:
+            title: Times
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Times enda. Klikk på "Lag en ny Time" for å
+              legge til din første time.
+          time:
+            view_live_html: Vis hvordan denne time ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne time
+            delete: Fjern denne time permanent
         types:
           actions:
             create_new: Lag en ny Type
@@ -37,6 +54,9 @@ nb:
               i et nytt vindu)</em>
             edit: Rediger denne event
             delete: Fjern denne event permanent
+      times:
+        show:
+          other: Andre Times
       types:
         show:
           other: Andre Types
@@ -45,6 +65,9 @@ nb:
           other: Andre Events
   activerecord:
     attributes:
+      refinery/events/time:
+        time: Time
+        event_id: Event
       refinery/events/type:
         name: Name
       refinery/events/event:

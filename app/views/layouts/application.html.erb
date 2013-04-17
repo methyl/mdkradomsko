@@ -55,10 +55,12 @@
     <div class="container">
       <p class="title">Partnerzy i sponsorzy:</p>
       <div class="box-partners_sponsors">
-        <% 7.times do |i| %>
-          <%= image_tag "partner#{i+1}.jpg" %> 
-        <% end %>
-        </div> 
+        <div class="marquee">
+          <% 7.times do |i| %>
+            <%= image_tag "partner#{i+1}.jpg" %> 
+          <% end %>
+        </div>
+      </div> 
     </div>   
     
   </aside>
@@ -68,11 +70,6 @@
         <p class="copy">
           Copyrights 2013 by Miejski Dom Kultury w Radomsku. All Rights Reserved.</p>
         <p class="realization">Projekt i Realziacja: <a href="http://kampanieSEO.pl">KampanieSEO.pl</a></p>
-      </div>
-      
-      <div class="visits">
-        <p>Odwiedzono: </p>
-        <p>71231233 razy</p>
       </div>
     </section>
   </div>

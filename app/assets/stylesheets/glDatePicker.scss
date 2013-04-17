@@ -24,7 +24,7 @@
   text-align: center;
   cursor: pointer;
   color: #fff;
-  background: #ffffff;
+  background: transparent;
   background: -moz-linear-gradient(top,  #ffffff 0%, #dadada 98%, #ffffff 99%, #dadada 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(98%,#dadada), color-stop(99%,#ffffff), color-stop(100%,#dadada));
   background: -webkit-linear-gradient(top,  #ffffff 0%,#dadada 98%,#ffffff 99%,#dadada 100%);
@@ -39,7 +39,7 @@
 .gldp-default .border {
   border-style: solid;
   border-width: 0;
-  border-color: #fff;
+  border-color: #fafafa;
 }
 
 /* Month/Year text and select */
@@ -48,7 +48,7 @@
   font-size: 16px !important;
   font-weight: bold;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.75);
-  background: #fff;
+  background: transparent;
   color: #222;
 }
 
@@ -88,7 +88,7 @@
   background: -ms-linear-gradient(top,  #ff0000 0%,#ffcccc 1%,#ff0000 2%,#aa0000 98%,#dd4444 99%,#880000 100%);
   background: linear-gradient(to bottom,  #ff0000 0%,#ffcccc 1%,#ff0000 2%,#aa0000 98%,#dd4444 99%,#880000 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#880000',GradientType=0 );
-  background: #fff;
+  background: transparent;
 }
 
 /* Weekdays */
@@ -103,7 +103,6 @@
 /* Weekend days */
 .gldp-default .sat,
 .gldp-default .sun {
-  color: #3858a8;
   font-weight: bold;
 }
 
@@ -127,7 +126,6 @@
 /* Non-Selectable days */
 .gldp-default .noday {
   color: #444;
-  font-weight: normal;
   cursor: auto !important;
   background: #aaaaaa;
   background: -moz-linear-gradient(top,  #aaaaaa 0%, #8a8a8a 98%, #aaaaaa 99%, #8a8a8a 100%);

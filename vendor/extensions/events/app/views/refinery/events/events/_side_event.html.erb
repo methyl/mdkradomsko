@@ -3,7 +3,7 @@
   <p class="numer"><%= side_event_counter+1 %>.</p>
     <p class="opis">
       <span><%= side_event.type.name %>: </span> 
-        <%= I18n.l side_event.date, format: :short %>, <%= side_event.hours %><br />
+        <%= I18n.l side_event.date, format: :short %><br /> godz. <%= side_event.today_hours.join ', ' %><br />
       <span class="title">„<%= side_event.name %>”, <span class="small"><%= side_event.info %></span></span>
     </p>
   </a>
