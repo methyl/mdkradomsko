@@ -25,24 +25,21 @@ module Refinery
       end
 
       def self.by_date(date)
-        joins('JOIN refinery_events_times AS times ON times.event_id=refinery_events.id')
-        .where('DATE(times.time)=? OR DATE(refinery_events.date)=?', date, date)
-        .group('refinery_events.id')
+        joins_time
+          .where('DATE(times.time)=? OR DATE(refinery_events.date)=?', date, date)
+          .group('refinery_events.id')
       end
 
       def self.today
-        joins('JOIN refinery_events_times AS times ON times.event_id=refinery_events.id')
-        .where('DATE(times.time)=?', Date.today)
+        joins_time.where('DATE(times.time)=?', Date.today)
       end
 
       def self.previous
-        joins('JOIN refinery_events_times AS times ON times.event_id=refinery_events.id')
-        .where('DATE(times.time)<?', Date.today)
+        joins_time.where('DATE(times.time)<?', Date.today)
       end
 
       def self.next_events
-        joins('JOIN refinery_events_times AS times ON times.event_id=refinery_events.id')
-        .where('DATE(times.time)>?', Date.today)
+        joins_time.where('DATE(times.time)>?', Date.today)
       end
 
       def today_hours
@@ -65,7 +62,12 @@ module Refinery
       end
 
       def self.dates
-        ::DateCollection.new Refinery::Events::Time.select('DISTINCT DATE(time) as date').order('date ASC').map {|e| e.date.to_date}
+        dates = joins_time.select('time').group('DATE(times.time)').order('DATE asc').map(&:time).map(&:to_date)
+        ::DateCollection.new dates
+      end
+
+      def self.joins_time
+        joins('JOIN refinery_events_times AS times ON times.event_id=refinery_events.id')
       end
     end
   end

@@ -43,7 +43,7 @@ module Refinery
     protected
 
       def find_all_events
-        @events = Event.order('position ASC')
+        @events = Event.order('date ASC')
       end
     end
   end
