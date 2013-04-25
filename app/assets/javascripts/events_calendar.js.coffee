@@ -12,12 +12,12 @@
 #       url: '/events/dates.json'
 
 parseCurrentDate = ->
-  href = window.location.href
   parts = window.location.pathname.split('/')
-  if parts.length
-    new Date(parts[parts.length-1]) 
-  else
+  date = new Date(parts[parts.length-1]) 
+  if date.toString() == 'Invalid Date'
     new Date()
+  else
+    date
 
 $(document).ready ->
   request = $.get('/events/dates.json')
@@ -30,4 +30,4 @@ $(document).ready ->
         day   = ('0' + date.getDate()).slice(-2)
         month = ('0' + (date.getMonth()+1)).slice(-2)
         year  = date.getFullYear()
-        window.location.href = "/events/#{year}-#{month}-#{day}"
+        window.location.pathname = "/events/#{year}-#{month}-#{day}"
