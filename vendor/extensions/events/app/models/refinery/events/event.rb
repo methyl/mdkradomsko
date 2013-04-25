@@ -20,12 +20,9 @@ module Refinery
       has_many :times
       accepts_nested_attributes_for :times
 
-
-      # scope :by_date, lambda { |date| where(:date => date.beginning_of_day..date.end_of_day) }
-      # scope :soon,  where(:date => DateTime.now..DateTime.now + 10.days)
-      scope :previous, where('date < ?', DateTime.now)
-      scope :next_events, where('date > ?', DateTime.now)
-      scope :soon,  next_events.limit(5)
+      def self.soon
+        next_events.limit(5)
+      end
 
       def self.by_date(date)
         joins('JOIN refinery_events_times AS times ON times.event_id=refinery_events.id')
@@ -36,6 +33,16 @@ module Refinery
       def self.today
         joins('JOIN refinery_events_times AS times ON times.event_id=refinery_events.id')
         .where('DATE(times.time)=?', Date.today)
+      end
+
+      def self.previous
+        joins('JOIN refinery_events_times AS times ON times.event_id=refinery_events.id')
+        .where('DATE(times.time)<?', Date.today)
+      end
+
+      def self.next_events
+        joins('JOIN refinery_events_times AS times ON times.event_id=refinery_events.id')
+        .where('DATE(times.time)>?', Date.today)
       end
 
       def today_hours

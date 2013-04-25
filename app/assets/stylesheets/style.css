@@ -161,6 +161,7 @@ header{
 		background-image: url(/assets/top-bg_slogan.jpg);
 		background-repeat: no-repeat;
 		background-position: 82% 0px;	
+		position: relative;
 			
 	}
 		header .container #top{
@@ -208,6 +209,9 @@ header{
 			margin-bottom:10px;
 			margin-top:12px;
 			float:left;
+			position: absolute;
+			left: 0;
+			top: 143px;
 		}
 			nav>ul, nav>ul>li{
 				float:left;	
@@ -463,7 +467,6 @@ header{
 						font-size:5em;
 					}
 					ul#today-see li p.opis{
-						float: left;
 						line-height: 22px;
 						margin-top: -12px;
 						width: 86%;
