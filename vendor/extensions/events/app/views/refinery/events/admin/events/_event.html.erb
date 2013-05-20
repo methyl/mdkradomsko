@@ -1,4 +1,4 @@
-<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(event) -%>">
+<li class='clearfix record <%= cycle("on", "on-hover") %> <%= 'archived' if event.archived? %>' id="<%= dom_id(event) -%>">
   <span class='title'>
     <%= event.name %>
 

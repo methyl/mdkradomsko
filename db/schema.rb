@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130417115605) do
+ActiveRecord::Schema.define(:version => 20130517122354) do
 
   create_table "refinery_event_translations", :force => true do |t|
     t.integer  "refinery_event_id"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20130417115605) do
     t.datetime "updated_at",  :null => false
     t.integer  "image_id"
     t.boolean  "promoted"
+    t.boolean  "archived"
   end
 
   create_table "refinery_events_times", :force => true do |t|

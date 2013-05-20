@@ -2,22 +2,20 @@ module Refinery
   module Events
     class EventsController < ::ApplicationController
 
-      before_filter :find_all_events
+      before_filter :find_active_events, :except => [:archive]
+      before_filter :find_all_events, :only => :archive
+      before_filter :find_events_by_type
 
       def index
-        if params.has_key? :type
-          @events = Event.by_type(params[:type])
-          @page_title  = params[:type].humanize
-        else
-          @page_title = ::I18n.t 'refinery.plugins.events.archive'
-        end
+        by_date(params[:date]) if params[:date]
+      end
 
+      def archive
+        @page_title = ::I18n.t 'refinery.plugins.events.archive'
+        @events = @events.archived
         date = params[:date] ? Date.strptime(params[:date]) : Date.today
-        date = @events.dates.closest(date)
-        @previous_date = @events.dates.previous(date)
-        @next_date     = @events.dates.next(date)
-
-        @events = @events.by_date(date)
+        by_date(date)
+        render :index
       end
 
       def show
@@ -26,24 +24,50 @@ module Refinery
 
       def soon
         @page_title = ::I18n.t 'refinery.plugins.events.soon'
-        @events = Event.soon
+        @events = @events.soon
         render :index
       end
 
       def today
         @page_title = ::I18n.t 'refinery.plugins.events.today'
-        @events = Event.today
+        @events = @events.today
         render :index
       end
 
       def dates
-        render :json => Event.dates
+        if params[:archive]
+          events = Event.archived
+        else
+          events = Event.active
+        end
+        events = events.by_type(params[:type]) if params[:type]
+        render :json => events.dates
       end
 
     protected
 
+      def by_date(date)
+        date = @events.dates.closest(date)
+        @previous_date = @events.dates.previous(date)
+        @next_date     = @events.dates.next(date)
+        @events = @events.by_date(date)
+      end
+
+      def find_active_events
+        @events = Event.active
+      end
+
       def find_all_events
-        @events = Event.order('date ASC')
+        @events = Event.scoped
+      end
+
+      def find_events_by_type
+        if params.has_key? :type
+          @events = @events.by_type(params[:type])
+          @page_title  = params[:type].humanize
+        else
+          @page_title = ::I18n.t 'refinery.plugins.events.title'
+        end
       end
     end
   end

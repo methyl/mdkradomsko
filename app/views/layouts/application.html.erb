@@ -79,5 +79,14 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <%= render 'refinery/javascripts' %>
+<script>
+  <% if @event %>
+    window.event_type = '<%= @event.type.name.downcase %>';
+  <% else %>
+    window.event_type = '<%= params[:type] %>';
+  <% end %>
+</script>
 </body>
+
+
 </html>

@@ -3,7 +3,7 @@ module Refinery
     class Event < Refinery::Core::BaseModel
       self.table_name = 'refinery_events'
 
-      attr_accessible :name, :info, :description, :date, :hours, :type_id, :position, :image_id, :promoted, :times_attributes
+      attr_accessible :name, :info, :description, :date, :hours, :type_id, :position, :image_id, :promoted, :times_attributes, :archived
       translates :name, :info, :description, :hours
 
       class Translation
@@ -28,6 +28,7 @@ module Refinery
         joins_time
           .where('DATE(times.time)=? OR DATE(refinery_events.date)=?', date, date)
           .group('refinery_events.id')
+          .order('date asc')
       end
 
       def self.today
@@ -40,6 +41,14 @@ module Refinery
 
       def self.next_events
         joins_time.where('DATE(times.time)>?', Date.today)
+      end
+
+      def self.active
+        where('not archived')
+      end
+
+      def self.archived
+        where('archived')
       end
 
       def today_hours

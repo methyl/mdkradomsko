@@ -50,6 +50,11 @@
   </div>
 
   <div class='field'>
+    <%= f.label :archived -%>
+    <%= f.check_box :archived -%>
+  </div>
+
+  <div class='field'>
     <%= f.label :image -%>
     <%= render :partial => "/refinery/admin/image_picker", :locals => {
           :f => f,

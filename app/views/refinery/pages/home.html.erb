@@ -5,10 +5,12 @@
         <%= image_tag 'top-foto.jpg', size: '949x346'  %>
       </div>
       <div class="content-news">
-        <h2><%= @latest_news.title %></h2>
-        <p>
-          <%= strip_tags(@latest_news.body).truncate(610) %>
-        </p>
+        <div class="content">
+          <h2><%= @latest_news.title %></h2>
+          <p>
+            <%= strip_tags(@latest_news.body).truncate(500) %>
+          </p>
+        </div>
         <a href="<%= refinery.news_item_path(@latest_news) %>" class="more shadow"><%= t('news.more') %></a>
       </div>
     </section> 

@@ -2,9 +2,19 @@
   <h5>Zobacz co zobaczysz</h5>
     <div class="box-see">
       <ul>
+        <% if @event %>
+          <li><a href="/events/<%= @event.type.name.downcase %>/soon">Wkrótce</a></li>
+          <li><a href="/events/<%= @event.type.name.downcase %>/today">Dzisiaj</a></li>
+          <li><a href="/events/<%= @event.type.name.downcase %>/archive">Archiwum</a></li>
+        <% elsif params[:type] %>
+          <li><a href="/events/<%= params[:type] %>/soon">Wkrótce</a></li>
+          <li><a href="/events/<%= params[:type] %>/today">Dzisiaj</a></li>
+          <li><a href="/events/<%= params[:type] %>/archive">Archiwum</a></li>
+        <% else %>
           <li><a href="/events/soon">Wkrótce</a></li>
           <li><a href="/events/today">Dzisiaj</a></li>
-          <li><a href="/events">Archiwum</a></li>
+          <li><a href="/events/archive">Archiwum</a></li>
+        <% end %>
         </ul> 
     </div>       
 </section>

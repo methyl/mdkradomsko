@@ -282,13 +282,20 @@ header{
 		}
 			.content-news h2{
 				margin-bottom:20px;
+				font-size: 2em;
 			}
 			.content-news p{
 				font-family:Tahoma, Geneva, sans-serif;
 				color:#fff;
+				max-height: 135px;
+				overflow: hidden;
 			}
 			.content-news a.more{
 				margin-top:18px;	
+			}
+			.content-news .content {
+				height: 277px;
+				overflow: hidden;
 			}
 	/* ~~ Główna kolumna ~~ */
 	#col-center{
