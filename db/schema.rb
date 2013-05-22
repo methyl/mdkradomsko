@@ -35,11 +35,11 @@ ActiveRecord::Schema.define(:version => 20130517122354) do
     t.string   "hours"
     t.integer  "type_id"
     t.integer  "position"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.integer  "image_id"
     t.boolean  "promoted"
-    t.boolean  "archived"
+    t.boolean  "archived",    :default => false, :null => false
   end
 
   create_table "refinery_events_times", :force => true do |t|

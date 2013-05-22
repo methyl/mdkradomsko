@@ -170,13 +170,13 @@ header{
 			padding-bottom:39px;
 			float:left;
 		}
-			h1{
+			header .container #top h1{
 				float:left;
 				margin:44px 0px 0px 19px;
 				width:153px;
 				height:46px;	
 			}
-				h1 a{
+				header .container #top h1 a{
 					float: left;
 					width: 153px;
 					text-indent:-998em;
