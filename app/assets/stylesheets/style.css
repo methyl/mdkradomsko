@@ -28,7 +28,7 @@ a:link, a:visited {
 	outline:0;
 }
 a:hover {
-	text-decoration:none;
+	text-decoration:underline;
 }
 a:focus {
 	outline:none;
@@ -48,6 +48,10 @@ a.more, a:link.more, aside#newsletter form input[type='submit']{
 }
 a.more:hover, nav ul li a:hover, aside#newsletter form input[type='submit']:hover{
 	text-shadow:none;	
+}
+
+p > a {
+	text-decoration: underline;
 }
 /* ~~ LAYOUT ~~ */
 html {

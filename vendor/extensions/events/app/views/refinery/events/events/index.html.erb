@@ -9,9 +9,11 @@
               <td class="name">
                 <h6><%= event.type.name %>:<br /> <%= event.name %></h6>
                 <%= event.info %>
-                <%= link_to t('news.more'), refinery.events_event_path(event) %>
               </td>
               <td class="image"><%= image_tag event.image.url if event.image %></td>
+            </tr>
+            <tr>
+              <td><%= link_to t('news.more'), refinery.events_event_path(event) %></td>
             </tr>
           </table>
         </div>
