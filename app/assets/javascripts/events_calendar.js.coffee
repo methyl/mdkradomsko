@@ -22,10 +22,12 @@ parseCurrentDate = ->
 setLocationDate = (date) ->
   exp = /\d{4}-\d{2}-\d{2}/
   if window.location.pathname.match(exp)
-    path =  window.location.pathname.replace(exp, date)
+    path = window.location.pathname.replace(exp, date)
+  else if window.location.pathname == '/'
+    path = "#{window.location.pathname}events/#{date}" 
   else
-    path = window.location.pathname += '/' + date
-  window.location.pathname = path.replace('today/', '').replace('soon/', '')
+    path = "#{window.location.pathname}/#{date}" 
+  window.location.pathname = path.replace('today/', '').replace('soon/', '').replace(/\/events\/\d+\//, '/events/')
 
 getDatesPath = ->
   path = '/events/'

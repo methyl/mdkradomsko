@@ -11,6 +11,7 @@ Refinery::Core::Engine.routes.append do
         get 'soon'
         get 'today'
         get 'archive'
+        get 'elapsed'
         get ':date'         => 'events#index', :constraints => {:date => /\d{4}-\d{2}-\d{2}/}, :as => 'by_date'
         get ':type'         => 'events#index', :constraints => {:type => /[a-z]+/}, :as => 'by_type'
         get ':type/:date'   => 'events#index', :constraints => {:type => /[a-z]+/, :date => /\d{4}-\d{2}-\d{2}/}, :as => 'by_type_date'

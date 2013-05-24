@@ -8,7 +8,15 @@ pl:
   date:
     formats:
       default: "%d %B %Y"
-
+  activerecord:
+    attributes:
+      'refinery/news/item':
+        title: Tytuł
+        body: Treść
+        publish_date: Data opublikowania
+        expiration_date: Data wygaśnięcia
+    models:
+      'refinery/news/item': Aktualnośći
   refinery:
     plugins:
       refinery_core:
@@ -17,6 +25,31 @@ pl:
       refinery_dialogs:
         title: Okienka dialogowe
         description: Refinery dialogs plugin
+      refinerycms_news:
+        title: Aktualności
+        description: Aktualności i wydarzenia
+    news:
+      admin:
+        items:
+          item:
+            view_live_html: "Zobacz podgląd <br/><em>(otwiera nowe okno)</em>"
+            edit: "Edytuj wiadomość"
+            delete: "Skasuj wiadomość na zawsze"
+            published: Opublikowano
+          index:
+            create: "Dodaj nową aktualizację"
+            item: Aktualizacja
+            no_items_yet: 'W bazie nie ma żadnych rezultatów, dodaj nową aktualizację.'
+      items:
+        show:
+          back_to_index: "Powrót do wszystkich aktualności"
+          published: Opublikowano
+        recent_posts:
+          recent_posts: Ostatnie aktualności
+        index:
+          published: Opublikowano
+          read_more: Czytaj więcej
+          no_items_yet: "Przepraszamy, brak rezultatów."
     welcome:
       there_are_no_users: Nie ma jeszcze żadnych użytkowników, więc na początek pomożemy Ci się przygotować.
     crudify:

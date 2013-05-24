@@ -7,6 +7,19 @@ Mdkradomsko::Application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, :at => '/'
 
+  namespace :news, :path => '' do
+    namespace :admin, :path => 'refinery' do
+      scope :path => 'news' do
+        root :to => "items#index"
+        resources :items, :except => :show do
+          collection do
+            post :update_positions
+          end
+        end
+      end
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

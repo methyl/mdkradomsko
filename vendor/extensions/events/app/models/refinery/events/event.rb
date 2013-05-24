@@ -3,7 +3,7 @@ module Refinery
     class Event < Refinery::Core::BaseModel
       self.table_name = 'refinery_events'
 
-      attr_accessible :name, :info, :description, :date, :hours, :type_id, :position, :image_id, :promoted, :times_attributes, :archived
+      attr_accessible :name, :info, :description, :date, :hours, :type_id, :position, :image_id, :promoted, :times_attributes, :archived, :elapsed
       translates :name, :info, :description, :hours
 
       class Translation
@@ -44,11 +44,15 @@ module Refinery
       end
 
       def self.active
-        where('not archived')
+        where('not archived and elapsed is null or elapsed=false')
       end
 
       def self.archived
-        where('archived')
+        where('archived or elapsed')
+      end
+
+      def self.elapsed
+        where('elapsed')
       end
 
       def today_hours

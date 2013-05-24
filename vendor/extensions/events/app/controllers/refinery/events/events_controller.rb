@@ -2,7 +2,7 @@ module Refinery
   module Events
     class EventsController < ::ApplicationController
 
-      before_filter :find_active_events, :except => [:archive]
+      before_filter :find_active_events, :except => [:archive, :elapsed]
       before_filter :find_all_events, :only => :archive
       before_filter :find_events_by_type
 
@@ -13,8 +13,8 @@ module Refinery
       def archive
         @page_title = ::I18n.t 'refinery.plugins.events.archive'
         @events = @events.archived
-        date = params[:date] ? Date.strptime(params[:date]) : Date.today
-        by_date(date)
+        
+        by_date(Date.strptime(params[:date])) if params[:date]
         render :index
       end
 

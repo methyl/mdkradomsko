@@ -25,12 +25,12 @@
             <%= image_tag 'wydarzenia-foto.jpg', size: '573x118', alt: 'Wydzarzenie' %> 
           </div>
           <ul>
-            <% @previous_events.each_with_index do |event, i| %>
+            <% @elapsed_events.each_with_index do |event, i| %>
               <li><a href="<%= events_event_path(event) %>"><%= i+1 %>. <%= event.name %></a></li>
             <% end %>
           </ul>
         </div>
-         <%= link_to 'Zobacz wszystkie', events_events_path, :class => [:more, :shadow] %>
+         <%= link_to 'Zobacz wszystkie', '/events/archive', :class => [:more, :shadow] %>
       </section>
 
       <section id="news">

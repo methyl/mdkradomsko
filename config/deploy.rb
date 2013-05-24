@@ -27,11 +27,12 @@
 require "bundler/capistrano"
 require "rvm/capistrano"
 load 'deploy/assets'
+ssh_options[:port] = 2222
 
 
 set :application,   "mdkradomsko"
-set :domain,        "lucjansuski.pl"
-set :repository,    "git@lucjansuski.pl:mdkradomsko"
+set :domain,        "lucjansuski.pl:2222"
+set :repository,    "ssh://git@lucjansuski.pl:2222/mdkradomsko.git"
 set :use_sudo,      false
 set :deploy_to,     "/home/deployer/apps/#{application}"
 set :scm,           "git"

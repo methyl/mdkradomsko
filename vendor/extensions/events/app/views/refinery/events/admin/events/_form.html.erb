@@ -55,6 +55,11 @@
   </div>
 
   <div class='field'>
+    <%= f.label "Wydarzyło się" -%>
+    <%= f.check_box :elapsed -%>
+  </div>
+
+  <div class='field'>
     <%= f.label :image -%>
     <%= render :partial => "/refinery/admin/image_picker", :locals => {
           :f => f,
@@ -88,6 +93,7 @@
 <% end -%>
 <% content_for :javascripts do %>
   <script>
+    
     bind_delete = function(){
       $('a.delete-time').click(function(e){
         e.preventDefault()
@@ -111,6 +117,7 @@
       });
     }
     $(document).ready(function(){
+      window.time_field = $('div.new-time').last().remove()
       page_options.init(false, '', '');
       $('a.delete-new-time').click(function(e){
         window.lastDeletedTime = $(e.currentTarget).parent().clone()
@@ -123,15 +130,15 @@
           window.lastDeletedTime = null
         }
         else {
-          time = $('div.new-time').last()
-          new_time = time.clone()
+          new_time = window.time_field.clone()
+          console.log(new_time)
           new_time.find('select').each(function(i, select){
             name = $(select).attr('name')
             id = parseInt(name.match(/\[(\d)\]/)[1]) + 1
             name = name.replace(/\[(\d)\]/, '['+id+']')
             $(select).attr('name', name)
           })
-          new_time.insertAfter($('div.time').last())
+          new_time.insertAfter($('a.new-time'))
         }
         $('a.delete-new-time').click(function(e){
           window.lastDeletedTime = $(e.currentTarget).parent().clone()

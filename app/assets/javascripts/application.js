@@ -18,6 +18,9 @@
 //= require scroller
 //= require glDatePicker
 //= require events_calendar
+//= require jquery-ui-1.8.18.custom.min
+//= require jquery.smooth-scroll.min
+//= require lightbox
 
 $(function() {
 
@@ -41,27 +44,17 @@ $(function() {
     $('p').each(function() {
         el = $(this);
         var video_id = el.text().split('v=')[1];
-        console.log(video_id)
         if(video_id) {
             el.html('');
             src = 'http://www.youtube.com/embed/' + video_id
             var iframe = $('<iframe src="'+src+'" width="420" height="345" frameborder="0" allowfullscreen />')
             el.append(iframe);
         }
-        // if(!video_id) {
-        //     return false
-        // }
-        // var ampersandPosition = video_id.indexOf('&');
-        // if(ampersandPosition != -1) {
-        //   video_id = video_id.substring(0, ampersandPosition);
-        // }
+    });
 
-
-        // console.log(video_id)
-
-        // console.log('http://www.youtube.com/embed/' + matches[0])
-
-
-
+    $('p > img').each(function() {
+        img = $(this);
+        src = img.attr('src')
+        img.wrap('<a href="'+src+'" rel="lightbox[group]">')
     });
 });

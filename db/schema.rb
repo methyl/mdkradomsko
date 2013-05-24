@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517122354) do
+ActiveRecord::Schema.define(:version => 20130524153715) do
 
   create_table "refinery_event_translations", :force => true do |t|
     t.integer  "refinery_event_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130517122354) do
     t.integer  "image_id"
     t.boolean  "promoted"
     t.boolean  "archived",    :default => false, :null => false
+    t.boolean  "elapsed",     :default => false
   end
 
   create_table "refinery_events_times", :force => true do |t|
@@ -103,6 +104,7 @@ ActiveRecord::Schema.define(:version => 20130517122354) do
     t.datetime "expiration_date"
     t.string   "source"
     t.string   "slug"
+    t.integer  "position"
   end
 
   add_index "refinery_news_items", ["id"], :name => "index_refinery_news_items_on_id"
