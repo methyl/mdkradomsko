@@ -54,7 +54,7 @@ $(function() {
 
     $('p > img').each(function() {
         img = $(this);
-        src = img.attr('src')
+        src = img.attr('src').replace(/LkpQRyJd.*\//, 'LkpQRyJdXQ/') // convert to full size
         img.wrap('<a href="'+src+'" rel="lightbox[group]">')
     });
 });
