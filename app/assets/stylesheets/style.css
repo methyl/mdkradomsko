@@ -228,9 +228,9 @@ header{
 					position: relative;
 				}
 					nav>ul>li>a, nav>ul>li>a:link{
-						font-size:1.4em;
-						font-family:Calibri;
-						padding:14px 14px;	
+						font-size:12px;
+						font-family:Calibri, sans-serif;
+						padding:14px 8px;	
 					}
 					nav>ul>li>a:hover, nav>ul>li>a.active, nav>ul>li>a:active{
 						background-color:#640905;
