@@ -21,6 +21,12 @@ module Refinery
 
       default_scope :order => "ISNULL(position), position ASC, publish_date DESC"
 
+      before_save :check_order
+
+      def check_order
+        Refinery::News::Item.where('id != ? and position = ?', id, position).each { |item| item.update_attribute(:position, item.position + 1)}
+      end
+
       def not_published? # has the published date not yet arrived?
         publish_date > Time.now
       end
