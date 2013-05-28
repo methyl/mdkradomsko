@@ -20,7 +20,7 @@
 //= require events_calendar
 //= require jquery-ui-1.8.18.custom.min
 //= require jquery.smooth-scroll.min
-//= require lightbox
+//= require fresco
 
 $(function() {
 
@@ -55,6 +55,6 @@ $(function() {
     $('p > img').each(function() {
         img = $(this);
         src = img.attr('src').replace(/LkpQRyJd.*\//, 'LkpQRyJdXQ/') // convert to full size
-        img.wrap('<a href="'+src+'" rel="lightbox[group]">')
+        img.wrap('<a href="'+src+'" class="fresco" data-fresco-group="group">')
     });
 });
