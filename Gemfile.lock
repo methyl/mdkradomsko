@@ -167,6 +167,7 @@ GEM
     rake (10.0.3)
     rdoc (3.12.2)
       json (~> 1.4)
+    refinerycms-ckeditor (0.2.0)
     refinerycms-i18n (2.0.2)
       refinerycms-core (~> 2.0.0)
       routing-filter (>= 0.2.3)
@@ -218,6 +219,7 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.13)
   refinerycms (~> 2.0.0)!
+  refinerycms-ckeditor
   refinerycms-events!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-news (~> 2.0.0)
