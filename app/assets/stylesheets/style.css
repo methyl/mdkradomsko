@@ -382,7 +382,7 @@ header{
 					.center-news, .center-newscinema{
 						float:left;
 						width:100%;
-						height:100px;
+						height:200px;
 						padding: 5px 0;
 						overflow:hidden;
 					}
