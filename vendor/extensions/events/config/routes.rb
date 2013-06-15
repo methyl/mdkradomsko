@@ -4,6 +4,7 @@ Refinery::Core::Engine.routes.append do
   namespace :events do
     resources :events, :path => '', :only => [:index, :show] do
       collection do
+        get ':id' => 'events#show', :constraints => {id: /\d+/}
         get 'dates', :format => :json
         get 'dates/archive' => 'events#dates', :format => :json, :defaults => {:archive => true}
         get ':type/dates' => 'events#dates', :format => :json
