@@ -115,3 +115,12 @@ div.show-event {
 }
 
 
+#gallery li {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  img {
+    width: 100%
+  }
+}

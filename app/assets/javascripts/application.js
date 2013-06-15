@@ -54,9 +54,9 @@ $(function() {
         }
     });
 
-    $('p > img, .news_item img').each(function() {
-        img = $(this);
-        src = img.attr('src').replace(/LkpQRyJd.*\//, 'LkpQRyJdXQ/') // convert to full size
-        img.wrap('<a href="'+src+'" class="fresco" data-fresco-group="group">')
-    });
+    // $('.news_item p > img').each(function() {
+    //     img = $(this);
+    //     src = img.attr('src').replace(/LkpQRyJd.*\//, 'LkpQRyJdXQ/') // convert to full size
+    //     img.wrap('<a href="'+src+'" class="fresco" data-fresco-group="group">')
+    // });
 });

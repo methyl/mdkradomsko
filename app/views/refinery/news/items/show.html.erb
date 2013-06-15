@@ -12,7 +12,7 @@
   <ul id='gallery'>
     <% @item.images.each do |i| %>
       <li>
-        <%= link_to image_tag(i.thumbnail("200x200#c").url, class: :fresco, data: {'fresco-group' => 'group'} ), i.thumbnail("900x600").url %>
+        <%= link_to image_tag(i.thumbnail("200x200#c").url), i.thumbnail("900x600").url, class: :fresco, data: {'fresco-group' => 'group'}  %>
       </li>
    <% end %>
   </ul>
