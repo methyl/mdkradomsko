@@ -48,5 +48,5 @@ Refinery::Core.configure do |config|
   config.register_javascript "admin2"
 
   # Register extra stylesheet for backend (optional options)
-  # config.register_stylesheet "custom", :media => 'screen'
+  # config.register_stylesheet "theme", :media => 'screen'
 end
