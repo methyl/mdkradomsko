@@ -10,6 +10,8 @@ module Refinery
         attr_accessible :locale
       end
 
+      has_many_page_images
+
       acts_as_indexed :fields => [:name, :info, :description, :hours]
 
       validates :name, :presence => true, :uniqueness => true

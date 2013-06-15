@@ -124,3 +124,21 @@ div.show-event {
     width: 100%
   }
 }
+
+.box-news.event {
+  div.info {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  div.dates {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin-top: 15px;
+    .hours {
+      text-indent: 3px;
+      &:before {
+        content: '-';
+      }
+    }
+  }
+}

@@ -1,13 +1,14 @@
-<section class="news">
+<section class="news">  
+
   <div class="box-news">
     <h5><%= item.title %></h5>
     <div class="center-news">
+      <%= image_tag item.images.first.thumbnail("154x99#c").url unless item.images.empty? %>
       <p>
         <%= raw item.body %>
       </p>
     </div>
     <div class="bottom-news">
-      <span class="data-add">12.12.2013r.</span>
       <a href="<%= refinery.news_item_path(item) %>" class="more shadow"><%= t('news.more') %></a>
     </div>
   </div>

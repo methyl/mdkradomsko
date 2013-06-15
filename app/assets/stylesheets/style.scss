@@ -324,16 +324,17 @@ header{
 				overflow:hidden;
 				width:100%;	
 				position:relative;
-				height:118px;
+				height:250px;
 				float:left;
 				margin-bottom:12px;
+				background: image-url('top-foto.jpg') no-repeat bottom;
 			}
 				 .key-events ul{
 					padding:0px;
-					width:205px;
-					height:118px; 
+					width:240px;
+					height:100%; 
 					float:left;
-					right: 2px;
+					right: 0px;
 					
 				 }
 				    .key-events ul li{
@@ -382,7 +383,7 @@ header{
 					.center-news, .center-newscinema{
 						float:left;
 						width:100%;
-						height:200px;
+						height:99px;
 						padding: 5px 0;
 						overflow:hidden;
 					}
@@ -391,6 +392,7 @@ header{
 							overflow:hidden;
 							height:99px;
 							width:154px;
+							margin-right: 5px;
 						}
 						.center-news p{
 							line-height: 17px;

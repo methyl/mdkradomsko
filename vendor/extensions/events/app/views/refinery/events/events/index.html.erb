@@ -7,10 +7,17 @@
           <table>
             <tr>
               <td class="name">
-                <h6><%= event.type.name %>:<br /> <%= event.name %></h6>
-                <%= event.info %>
+                <h6><%= event.name %></h6>
+                <div class="dates">
+                  <% event.times.group_by{|t| t.time.to_date}.each do |date, times| %>
+                    <strong><%= l(date) %>:</strong> <br />
+                    <div class="hours"><%= times.map{|time| time.time.strftime("%H:%m")}.join(", ") %></div>
+                    <br />
+                  <% end %>
+                </div>
+                <div class="info"><%= event.info %></div>
               </td>
-              <td class="image"><%= image_tag event.image.url if event.image %></td>
+              <td class="image"><%= image_tag event.images.first.thumbnail("200x200#c").url unless event.images.empty? %></td>
             </tr>
             <tr>
               <td><%= link_to t('news.more'), refinery.events_event_path(event) %></td>

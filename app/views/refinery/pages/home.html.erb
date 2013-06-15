@@ -21,16 +21,13 @@
       <section id="events">
         <h2>WYDARZYŁO SIĘ</h2>
         <div class="key-events">
-          <div class="foto-events">
-            <%= image_tag 'wydarzenia-foto.jpg', size: '573x118', alt: 'Wydzarzenie' %> 
-          </div>
           <ul>
             <% @elapsed_events.each_with_index do |event, i| %>
               <li><a href="<%= events_event_path(event) %>"><%= i+1 %>. <%= event.name %></a></li>
             <% end %>
           </ul>
         </div>
-         <%= link_to 'Zobacz wszystkie', '/events/archive', :class => [:more, :shadow] %>
+         <%= link_to 'Zobacz wszystkie', '/events/wydarzy%C5%82o%20si%C4%99', :class => [:more, :shadow] %>
       </section>
 
       <section id="news">

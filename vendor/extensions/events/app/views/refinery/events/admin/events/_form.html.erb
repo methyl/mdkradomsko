@@ -57,13 +57,10 @@
   </div>
 
   <div class='field'>
-    <%= f.label :image -%>
-    <%= render :partial => "/refinery/admin/image_picker", :locals => {
-          :f => f,
-          :field => :image_id,
-          :image => f.object.image,
-          :toggle_image_display => false
-        } %>
+    <%= f.label "images" -%>
+    <%= render :partial => "/refinery/admin/pages/tabs/images", :locals => {
+      :f => f
+    } %>
   </div>
 
   <%= f.fields_for :times do |t| %>
