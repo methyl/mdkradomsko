@@ -167,7 +167,6 @@ GEM
     rake (10.0.3)
     rdoc (3.12.2)
       json (~> 1.4)
-    refinerycms-ckeditor (0.2.0)
     refinerycms-i18n (2.0.2)
       refinerycms-core (~> 2.0.0)
       routing-filter (>= 0.2.3)
@@ -175,6 +174,8 @@ GEM
       friendly_id (~> 4.0.1)
       refinerycms-core (~> 2.0.1)
       refinerycms-settings (~> 2.0.0)
+    refinerycms-page-images (2.0.1)
+      refinerycms-pages (~> 2.0.0)
     refinerycms-settings (2.0.2)
       refinerycms-core (~> 2.0.1)
     routing-filter (0.3.1)
@@ -219,10 +220,10 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.13)
   refinerycms (~> 2.0.0)!
-  refinerycms-ckeditor
   refinerycms-events!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-news (~> 2.0.0)
+  refinerycms-page-images (~> 2.0.0)
   rvm-capistrano
   sass-rails (~> 3.2.3)
   sqlite3

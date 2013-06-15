@@ -22,6 +22,8 @@
 //= require jquery.smooth-scroll.min
 //= require fresco
 
+custom_wymeditor_boot_options = {classesItems: []}
+
 $(function() {
 
     var marquee = $(".marquee"); 

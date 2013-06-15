@@ -53,7 +53,7 @@ gem 'refinerycms', '~> 2.0.0', :git => 'git://github.com/refinery/refinerycms.gi
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
 gem "refinerycms-news", '~> 2.0.0'
-#  gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'refinerycms-page-images', '~> 2.0.0'
 
 gem 'refinerycms-events', :path => 'vendor/extensions'
-gem 'refinerycms-ckeditor'
+# gem 'refinerycms-ckeditor'

@@ -7,6 +7,8 @@ module Refinery
 
       attr_accessor :locale # to hold temporarily
 
+      has_many_page_images
+
       attr_accessible :title, :body,:content, :source, :publish_date, :expiration_date, :position
       class Translation
         attr_accessible :locale
