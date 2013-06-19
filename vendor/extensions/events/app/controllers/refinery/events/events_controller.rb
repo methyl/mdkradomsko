@@ -11,7 +11,7 @@ module Refinery
       end
 
       def archive
-        @page_title = ::I18n.t 'refinery.plugins.events.archive'
+        @page_title = params[:type].capitalize + " - " + ::I18n.t('refinery.plugins.events.archive')
         @events = @events.archived
         
         by_date(Date.strptime(params[:date])) if params[:date]
