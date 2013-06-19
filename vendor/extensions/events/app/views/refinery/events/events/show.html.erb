@@ -10,7 +10,7 @@
   <div class="dates">
     <% @event.times.group_by{|t| t.time.to_date}.each do |date, times| %>
       <strong><%= l(date) %>:</strong> <br />
-      <div class="hours"><%= times.map{|time| time.time.strftime("%H:%m")}.join(", ") %></div>
+      <div class="hours"><%= times.map{|time| time.time.strftime("%H:%M")}.join(", ") %></div>
       <br />
     <% end %>
   </div>

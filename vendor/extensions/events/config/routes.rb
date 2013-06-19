@@ -14,13 +14,13 @@ Refinery::Core::Engine.routes.append do
         get 'archive'
         get 'elapsed'
         get ':date'         => 'events#index', :constraints => {:date => /\d{4}-\d{2}-\d{2}/}, :as => 'by_date'
-        get ':type'         => 'events#index', :constraints => {:type => /[[:print:]]+/}, :as => 'by_type'
         get ':type/:date'   => 'events#index', :constraints => {:type => /[[:print:]]+/, :date => /\d{4}-\d{2}-\d{2}/}, :as => 'by_type_date'
         get ':type/soon'    => 'events#soon',     :constraints => {:type => /[[:print:]]+/}, :as => 'by_type_soon'
         get ':type/today'   => 'events#today',    :constraints => {:type => /[[:print:]]+/}, :as => 'by_type_today'
         get ':type/archive' => 'events#archive',  :constraints => {:type => /[[:print:]]+/}, :as => 'by_type_archive'
         get ':type/archive/:date' => 'events#archive',  :constraints => {:type => /[[:print:]]+/, :date => /\d{4}-\d{2}-\d{2}/}, :as => 'by_type_date_archive'
         get 'archive/:date' => 'events#archive',  :constraints => {:date => /\d{4}-\d{2}-\d{2}/}, :as => 'by_date_archive'
+        get ':type'         => 'events#index', :constraints => {:type => /[[:print:]]+/}, :as => 'by_type'
       end
     end
   end

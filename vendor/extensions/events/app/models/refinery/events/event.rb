@@ -1,9 +1,11 @@
+# encoding: UTF-8
+
 module Refinery
   module Events
     class Event < Refinery::Core::BaseModel
       self.table_name = 'refinery_events'
 
-      attr_accessible :name, :info, :description, :date, :hours, :type_id, :position, :image_id, :promoted, :times_attributes, :archived, :elapsed
+      attr_accessible :name, :info, :description, :date, :hours, :type_id, :position, :image_id, :promoted, :times_attributes, :archived
       translates :name, :info, :description, :hours
 
       class Translation
@@ -22,6 +24,10 @@ module Refinery
       has_many :times
       accepts_nested_attributes_for :times
 
+      def elapsed?
+        type.name == 'Wydarzyło się'
+      end
+
       def self.soon
         next_events.limit(5)
       end
@@ -34,31 +40,31 @@ module Refinery
       end
 
       def self.today
-        joins_time.where('DATE(times.time)=?', Date.today)
+        joins_time.where('DATE(times.time)=?', Date.today).group('refinery_events.id')
       end
 
       def self.previous
-        joins_time.where('DATE(times.time)<?', Date.today)
+        joins_time.where('DATE(times.time)<?', Date.today).group('refinery_events.id')
       end
 
       def self.next_events
-        joins_time.where('DATE(times.time)>?', Date.today)
+        joins_time.where('DATE(times.time)>?', Date.today).group('refinery_events.id')
       end
 
       def self.active
-        where('not archived and elapsed is null or elapsed=false')
+        where('not archived')
       end
 
       def self.archived
-        where('archived or elapsed')
+        where('archived')
       end
 
       def self.elapsed
-        where('elapsed')
+        joins('JOIN refinery_events_types AS types ON types.id=refinery_events.type_id').where('types.name="Wydarzyło się"')
       end
 
       def today_hours
-        times.where('DATE(time)=?', Date.today).map {|time| time.time.strftime('%H:%m')}
+        times.where('DATE(time)=?', Date.today).map {|time| time.time.strftime('%H:%M')}
       end
 
       def type_name

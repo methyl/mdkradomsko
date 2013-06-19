@@ -24,10 +24,12 @@ setLocationDate = (date) ->
   if window.location.pathname.match(exp)
     path = window.location.pathname.replace(exp, date)
   else if window.location.pathname == '/'
-    path = "#{window.location.pathname}events/#{date}" 
+    path = "#{window.location.pathname}events" 
   else
-    path = "#{window.location.pathname}/#{date}" 
-  window.location.pathname = path.replace('today/', '').replace('soon/', '').replace(/\/events\/\d+\//, '/events/')
+    path = "#{window.location.pathname}" 
+  search = '?date=' + date
+  path = path.replace('today/', '').replace('soon/', '').replace(/\/events\/\d+\//, '/events/')
+  window.location.href = window.location.origin + path + search
 
 getDatesPath = ->
   path = '/events/'
