@@ -123,7 +123,8 @@
           console.log(new_time)
           new_time.find('select').each(function(i, select){
             name = $(select).attr('name')
-            id = parseInt(name.match(/\[(\d)\]/)[1]) + 1
+            id = $('div.field.time').length + 1//parseInt(name.match(/\[(\d)\]/)[1]) + 1
+            console.log(id)
             name = name.replace(/\[(\d)\]/, '['+id+']')
             $(select).attr('name', name)
           })
