@@ -324,10 +324,10 @@ header{
 				overflow:hidden;
 				width:100%;	
 				position:relative;
-				height:250px;
+				height:150px;
 				float:left;
 				margin-bottom:12px;
-				background: image-url('top-foto.jpg') no-repeat bottom;
+				background: image-url('page-images/wydarzylo-sie-home.jpg') no-repeat bottom;
 			}
 				 .key-events ul{
 					padding:0px;
@@ -346,9 +346,11 @@ header{
 							font-weight:bold;
 							padding:8px 16px;
 							font-size:1.4em;
-							width:173px;
+							width:208px;
 							overflow:hidden;
 							float:left;
+							white-space: nowrap;
+							text-overflow: ellipsis;
 						}
 						.key-events ul li a:hover,
 						.key-events ul li a.active, .key-events ul li a:active{
