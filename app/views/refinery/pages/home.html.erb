@@ -23,7 +23,7 @@
         <div class="key-events">
           <ul>
             <% @elapsed_events.each_with_index do |event, i| %>
-              <li><a href="<%= events_event_path(event) %>"><%= i+1 %>. <%= event.name %></a></li>
+              <li><a title="<%= event.name %>" href="<%= events_event_path(event) %>"><%= i+1 %>. <%= event.name %></a></li>
             <% end %>
           </ul>
         </div>
