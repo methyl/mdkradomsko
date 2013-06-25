@@ -56,4 +56,6 @@ gem "refinerycms-news", '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
 
 gem 'refinerycms-events', :path => 'vendor/extensions'
+
+gem 'refinerycms-portfolio', :git => 'git://github.com/refinery/refinerycms-portfolio.git', :branch => '2-0-stable'
 # gem 'refinerycms-ckeditor'

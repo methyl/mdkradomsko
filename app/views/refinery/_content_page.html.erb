@@ -16,6 +16,30 @@
       :hide_sections => [:body_content_title],
       :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
     }) %>
+    <% if @page.children.any? and @page.children.first.images.any? %>
+      <div class="page-gallery">
+        <% @page.children.each do |gallery| %>
+          <% if gallery.images.any? %>
+            <a href="<%= url_for gallery.url %>" class="gallery">
+              <div>
+                <img src="<%= gallery.images.first.thumbnail('x150').url %>" />
+                <p><%= gallery.title %></p>
+              </div>
+            </a>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+    <% if @page.image_pages.any? %>
+      <div class="page-gallery">
+        <% @page.image_pages.each do |image| %>
+          <div class="gallery-image">
+            <%= link_to image_tag(image.image.thumbnail("x150").url), image.image.thumbnail("x600").url, class: :fresco, data: {'fresco-group' => 'group', 'fresco-caption' => image.caption}  %>
+            <p><%= raw image.caption %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
 

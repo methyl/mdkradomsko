@@ -147,3 +147,20 @@ div.show-event {
 p a, p a:link {
   text-decoration: underline
 }
+
+div.page-gallery {
+  text-align: center
+}
+
+a.gallery, div.gallery-image {
+  display: inline-block;
+  margin: 5px;
+  p {
+    text-align: center;
+  }
+}
+
+.fr-caption p {
+  color: #fff;
+  text-align: center
+}

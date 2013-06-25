@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/refinery/refinerycms-portfolio.git
+  revision: 5c528cfe2ebff8cae4b018c70b74dcc9e6674ac6
+  branch: 2-0-stable
+  specs:
+    refinerycms-portfolio (2.0.0)
+      awesome_nested_set (~> 2.1.0)
+      refinerycms-core (~> 2.0.0)
+
+GIT
   remote: git://github.com/refinery/refinerycms.git
   revision: 1f838463811100b28f7a952dd67bfa5bdd2cc59e
   branch: 2-0-stable
@@ -224,6 +233,7 @@ DEPENDENCIES
   refinerycms-i18n (~> 2.0.0)
   refinerycms-news (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)
+  refinerycms-portfolio!
   rvm-capistrano
   sass-rails (~> 3.2.3)
   sqlite3
