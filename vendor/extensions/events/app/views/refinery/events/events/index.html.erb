@@ -17,7 +17,7 @@
                 </div>
                 <div class="info"><%= event.info %></div>
               </td>
-              <td class="image"><%= image_tag event.images.first.thumbnail("x200#").url unless event.images.empty? %></td>
+              <td class="image"><%= image_tag event.images.first.thumbnail("x200").url unless event.images.empty? %></td>
             </tr>
             <tr>
               <td><%= link_to t('news.more'), refinery.events_event_path(event) %></td>
