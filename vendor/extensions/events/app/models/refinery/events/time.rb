@@ -6,11 +6,12 @@ module Refinery
       # def title was created automatically because you didn't specify a string field
       # when you ran the refinery:engine generator. <3 <3 Refinery CMS.
 
+      default_scope order('time ASC')
+
       belongs_to :event 
       def title
         "Override def title in vendor/extensions/events/app/models/refinery/events/time.rb"
       end
-
       
     end
   end
