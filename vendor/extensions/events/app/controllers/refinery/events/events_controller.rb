@@ -54,11 +54,11 @@ module Refinery
       end
 
       def find_active_events
-        @events = Event.active.order('position asc')
+        @events = Event.active.order('refinery_events.position asc')
       end
 
       def find_all_events
-        @events = Event.order('position asc')
+        @events = Event.order('refinery_events.position asc')
       end
 
       def find_events_by_type
