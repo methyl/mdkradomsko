@@ -36,7 +36,7 @@ module Refinery
         joins_time
           .where('DATE(times.time)=? OR DATE(refinery_events.date)=?', date, date)
           .group('refinery_events.id')
-          .order('position asc')
+          .order('refinery_events.position asc')
       end
 
       def self.today
