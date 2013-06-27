@@ -10,7 +10,15 @@
   <div class="dates">
     <% @event.times.group_by{|t| t.time.to_date}.each do |date, times| %>
       <strong><%= l(date) %>:</strong> <br />
-      <div class="hours"><%= times.map{|time| time.time.strftime("%H:%M")}.join(", ") %></div>
+      <div class="hours">
+        <% times.each do |time| %>
+          <% if time.msk_url %>
+            <a href="<%= time.msk_url("#{request.protocol}#{request.host_with_port}#{request.fullpath}") %>"><%= time.time.strftime("%H:%M") %></a>
+          <% else %>
+            <%= time.time.strftime("%H:%M") %>
+          <% end %>
+        <% end %>
+      </div>
       <br />
     <% end %>
   </div>

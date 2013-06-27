@@ -62,6 +62,9 @@
     <div class="field time">
       <%= t.label 'Czas' %>
       <%= t.datetime_select :time %>
+      <%= t.label "Link #{t.object.msk_event_id}" %>
+      <%= text_field_tag :msk_event_url %>
+      <%= t.hidden_field :msk_event_id %>
       <a href="#" data-id="<%= t.object.id %>" class="delete-time">Usuń</a>
     </div>
   <% end %>
@@ -70,6 +73,9 @@
     <div class="field time new-time">
       <%= t.label 'Nowy czas' %>
       <%= t.datetime_select :time %>
+      <%= t.label 'Link' %>
+      <%= text_field_tag :msk_event_url %>
+      <%= t.hidden_field :msk_event_id %>
       <a href="#" data-id="<%= t.object.id %>" class="delete-new-time">Usuń</a>
     </div>
   <% end %>
@@ -106,6 +112,14 @@
       });
     }
     $(document).ready(function(){
+      $("[name=msk_event_url]").bind('change', function(e){
+        el = e.currentTarget
+        match = $(el).val().match(/event_id=(\d+)/)
+        if(match)
+          $(el).parent().find('[type=hidden]').val(match[1])
+        else
+          $(el).parent().find('[type=hidden]').val($(el).val())
+      })
       window.time_field = $('div.new-time').last().remove()
       page_options.init(false, '', '');
       $('a.delete-new-time').click(function(e){

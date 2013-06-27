@@ -96,6 +96,9 @@ div.show-event {
       &:before {
         content: '-';
       }
+      a {
+        font-weight: bold
+      }
     }
   }
   font-size: 14px;
