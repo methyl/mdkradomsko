@@ -43,7 +43,7 @@ aside#calendar h5 {
     vertical-align: top;
     text-align: left
   }  
-  a {
+  a.czytaj-wiecej {
     display: block;
     margin: 10px 0;
     font-size: 14px
@@ -58,6 +58,9 @@ aside#calendar h5 {
   }
   td.image {
     text-align: right;
+  }
+  .dates a {
+    font-weight: bold
   }
 }
 
