@@ -8,7 +8,7 @@
   <div class="name"><%= @event.name %> </div>
   <%= @event.info %>
   <div class="dates">
-    <% @event.times.group_by{|t| t.time.to_date}.each do |date, times| %>
+    <% @event.grouped_times.each do |date, times| %>
       <strong><%= l(date) %>:</strong> <br />
       <div class="hours">
         <% times.each do |time| %>

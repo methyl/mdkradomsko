@@ -24,6 +24,10 @@ module Refinery
       has_many :times
       accepts_nested_attributes_for :times
 
+      def grouped_times
+        times.select{ |t| t.time }.group_by{ |t| t.time.to_date }
+      end
+
       def elapsed?
         type.name == 'Wydarzyło się'
       end
@@ -73,7 +77,7 @@ module Refinery
 
       def self.by_type(type)
         joins('
-          JOIN refinery_events_type_translations AS type 
+          JOIN refinery_events_type_translations AS type
           ON type.refinery_events_type_id=refinery_events.type_id
         ').where('lower(type.name)=?', type)
       end
