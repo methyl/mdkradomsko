@@ -3,6 +3,7 @@ gem 'pry'
 gem 'rails', '3.2.13'
 gem 'unicorn'
 gem 'newrelic_rpm'
+gem 'pg'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
