@@ -64,5 +64,21 @@ module Mdkradomsko
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.to_prepare do
+      ::Dragonfly[:images].configure do |c|
+        c.datastore.root_path = Rails.root.join('public', 'assets', 'images').to_s
+        c.url_format = '/assets/images/:job/:basename.:format'
+      end
+    end
+
+    # Override where dragonfly keeps your files and its url format
+    config.to_prepare do
+      ::Dragonfly[:resources].configure do |c|
+        c.datastore.root_path = Rails.root.join('public', 'assets', 'resources').to_s
+        c.url_format = '/assets/resources/:job/:basename.:format'
+      end
+    end
+
   end
 end
