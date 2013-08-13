@@ -2,12 +2,12 @@
   <section id="top-news" class="subpage">
     <div class="shadow-top"></div>
     <div class="fotos-topnews">
-      <img src="/assets/page-images/<%= page_image %>.jpg"  alt="Najnowsze events"> 
+      <%= image_tag "page-images/<%= page_image %>.jpg" %>
     </div>
     <div class="content-news">
       <h2><%= yield :body_content_title %></h2>
     </div>
-  </section> 
+  </section>
 </div>
 
 <div class="container">
@@ -22,7 +22,7 @@
           <% if gallery.images.any? %>
             <a href="<%= url_for gallery.url %>" class="gallery">
               <div>
-                <img src="<%= gallery.images.first.thumbnail('x150').url %>" />
+                <%= image_tag gallery.images.first.thumbnail('x150').url %>
                 <p><%= gallery.title %></p>
               </div>
             </a>
