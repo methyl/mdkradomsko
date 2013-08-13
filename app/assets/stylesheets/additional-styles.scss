@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ~~ Top news ~~ */
+#top-news.subpage{
+	height:145px;
+}
+	.subpage .fotos-topnews{
+		height:145px;
+		position:absolute;
+
+	}
+	.subpage .fotos-topnews img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	.subpage .content-news{
+		height:110px;
+		display:table;
+	}
+		.subpage .content-news h2{
+			vertical-align:middle;
+			display:table-cell;
+		}
+
+/* ~~ News - cinema ~~ */
+#news.cinema .news{
+	margin-bottom:27px;
+}
+#news.cinema, #news.cinema .news, #news.cinema .box-news h5{
+	margin-top:0px;
+}
+	#news.cinema .news{
+		border-top:none;
+		border-bottom:1px solid #C5C5C5;
+		padding-bottom:28px;
+	}
+
+		.show-details{
+			float:left;
+			width:170px;
+			margin-right:15px;
+			font-family:Tahoma, Geneva, sans-serif;
+			color:#000;
+		}
+				.show-details p{
+					font-size:1.4em;
+				}
+
+			.show-details .days-hours,
+			.show-details .movie-title{
+				float:left;
+				width:100%;
+			}
+
+			.show-details .movie-title{
+				margin-top:28px;
+
+			}
+				.show-details .movie-title h6{
+					font-family:Tahoma, Geneva, sans-serif;
+					font-size:1.6em;
+					margin:0px;
+					padding:0px;
+					font-weight:bold;
+				}
+
+		.scroll-content{
+			float:left;
+			width:374px;
+			height:100%;
+			overflow:hidden;
+			margin-top:-2px;
+		}
+
+		.scroller{
+			float:right;
+			width:10px;
+			height:100%;
+			position:relative;
+		}
+			.scroller a.arrow-top,
+			.scroller a.arrow-bottom{
+				position:absolute;
+				background-repeat: no-repeat;
+				background-position: 0px 0px;
+				float: left;
+				height: 10px;
+				width: 11px;
+			}
+			.scroller a.arrow-top{
+				background-image: image-url('arrow-top.jpg');
+				top:0px;
+				right:0px;
+			}
+			.scroller a.arrow-bottom{
+				background-image: image-url('arrow-bottom.jpg');
+				bottom:0px;
+				right:0px;
+			}
+
+	/* ~~ Pagination ~~ */
+	.all-news.pagination{
+		border-top:none;
+		float:left;
+		margin-top:-9px;
+		width:100%;
+		padding-top:0px;
+	}
+		.all-news.pagination a.prev,
+		.all-news.pagination a.next{
+			background-repeat: no-repeat;
+			font-size:1.4em;
+			color:#000;
+		}
+		.all-news.pagination a.prev{
+			float: left;
+			background-image: image-url('arrow-left.jpg');
+			padding-left:23px;
+			background-position: left center;
+		}
+		.all-news.pagination a.next{
+			float:right;
+			background-image: image-url('arrow-right.jpg');
+			padding-right:23px;
+			background-position: right center;
+		}
+		.all-news.pagination a.prev:hover,
+		.all-news.pagination a.next:hover{
+			color:#a40700;
+		}
+
+/* ~~ See what you see ~~ */
+	#see h5{
+		margin-bottom:0px;
+	}
+
+	.box-see{
+		margin-left:12px;
+		margin-bottom: 20px;
+		float:left;
+	}
+		#see ul{
+			margin-top:0px;
+		}
+			.box-see ul li{
+				float: left;
+				width: 100%;
+				margin-top: 19px;
+				padding-left: 23px;
+				background-image: image-url('bullets-see.jpg');
+				background-repeat: no-repeat;
+				background-position: left center;
+			}
+				.box-see ul li a, .box-see ul li a:link{
+					font-size:1.7em;
+					font-weight:bold;
+					color:#000;
+				}
+				.box-see ul li a:hover{
+					color:#b21900;
+				}
