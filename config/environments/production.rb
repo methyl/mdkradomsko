@@ -44,7 +44,7 @@ Mdkradomsko::Application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   config.action_controller.asset_host = Proc.new do |source|
-    source.include?('system/images') ? '' : "//d306zo5opmtoce.cloudfront.net"
+    "//d306zo5opmtoce.cloudfront.net" unless source.include?('system/images')
   end
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
