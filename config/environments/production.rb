@@ -43,7 +43,9 @@ Mdkradomsko::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = "//d306zo5opmtoce.cloudfront.net"
+  config.action_controller.asset_host = Proc.new do |source|
+    source.include?('system/images') ? '' : "//d306zo5opmtoce.cloudfront.net"
+  end
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( theme.css )
