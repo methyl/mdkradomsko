@@ -1,5 +1,5 @@
 Mdkradomsko::Application.routes.draw do
-  match "/:photo" => redirect { |p| "/assets/#{p[:photo]}.jpg" }, :format => :jpg, :constraints => {:photo => /t\d+/}
+  match "/:photo" => redirect { |p| ::Rails.application.config.asset_host.to_s + "/assets/#{p[:photo]}.jpg" }, :format => :jpg, :constraints => {:photo => /t\d+/}
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
