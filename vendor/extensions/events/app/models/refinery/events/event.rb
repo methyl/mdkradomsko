@@ -87,7 +87,8 @@ module Refinery
       end
 
       def self.dates
-        dates = joins_time.select('time').group('DATE(times.time)').order('DATE asc').map(&:time).map(&:to_date)
+        dates = joins_time.select('time').group('DATE(times.time)')
+          .order('DATE asc').map(&:time).reject{|o| o.nil?}.map(&:to_date)
         ::DateCollection.new dates
       end
 
