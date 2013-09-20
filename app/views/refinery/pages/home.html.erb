@@ -13,11 +13,11 @@
         </div>
         <a href="<%= refinery.news_item_path(@latest_news) %>" class="more shadow"><%= t('news.more') %></a>
       </div>
-    </section> 
+    </section>
    </div>
    <div class="container">
     <div id="col-center">
-    
+
       <section id="events">
         <h2>WYDARZYŁO SIĘ</h2>
         <div class="key-events">
@@ -38,7 +38,7 @@
     </div>
     <div id="col-right">
       <%= render '/refinery/events/events/promoted' %>
-      
+
       <section id="today">
         <h2>Dzisiaj</h2>
         <%= link_to 'Zobacz wszystkie', events_events_path, :class => [:more, :shadow] %>
@@ -54,7 +54,11 @@
       <section class="rozewicz">
         <a href="http://www.rozewiczopen.pl"><img src="/assets/rozewicz.png" /></a>
       </section>
-      
+
+      <section style="text-align: center">
+        <a href="http://kongreskultury.mdkradomsko.pl"><img src="/assets/kongres_kultury.jpg" /></a>
+      </section>
+
       <aside id="newsletter">
         <h5>Newsletter</h5>
         <p>
@@ -62,19 +66,19 @@
         </p>
         <form class="newsletter" method="post" action="http://mdkradomsko.us7.list-manage.com/subscribe/post?u=eb3ba5173094540b1befa8682&amp;id=ec13344b1d">
           <section>
-            <input type="text" id="email" name="EMAIL" placeholder="Adres email" /> 
+            <input type="text" id="email" name="EMAIL" placeholder="Adres email" />
             <input type="submit" id="zapisz" value="Zapisz" name="subscribe" class="button newsletter" />
           </section>
         </form>
       </aside>
-      
-      
+
+
 <!--         <div class="box-calendar">
           <a href="#"><%= image_tag 'kalendarium.jpg', size: '348x208', alt: 'Kalendarium imprez MDK' %></a>
         </div> -->
         <%= render :partial => '/refinery/events/events/calendar' %>
       </aside>
-      
+
     </div>
   </div>
 
