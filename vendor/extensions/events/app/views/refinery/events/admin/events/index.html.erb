@@ -6,7 +6,28 @@
   #records .elapsed .title {
   	color: #f00;
   }
+
+  ul.types {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.types li {
+    float: left;
+    margin: 10px;
+  }
+
+  ul.types li.active {
+    font-weight: bold;
+  }
 </style>
+
+<ul class="types">
+  <% @types.each do |type| %>
+    <li class="<%= 'active' if params[:type] == type.name %>"><a href="/refinery/events?type=<%= type.name %>"><%= type.name.capitalize %></a></li>
+  <% end %>
+</ul>
 
 <section id='records'>
   <%= render 'records' %>
