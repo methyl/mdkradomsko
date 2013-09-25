@@ -25,7 +25,10 @@
 
 <ul class="types">
   <% @types.each do |type| %>
-    <li class="<%= 'active' if params[:type] == type.name %>"><a href="/refinery/events?type=<%= type.name %>"><%= type.name.capitalize %></a></li>
+    <li class="<%= 'active' if params[:type] == type.name %>">
+      <a href="/refinery/events?type=<%= type.name %>"><%= type.name.capitalize %></a> <br />
+      <a href="/refinery/events?type=<%= type.name %>&amp;archived=true">Archiwum</a> <br />
+    </li>
   <% end %>
 </ul>
 

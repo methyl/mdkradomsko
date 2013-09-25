@@ -10,6 +10,11 @@ module Refinery
 
         def index
           @events = Refinery::Events::Event.order('refinery_events.position asc')
+          if params[:archived]
+            @events = @events.archived
+          else
+            @events = @events.active
+          end
           @events = @events.by_type(params[:type]) if params[:type]
         end
 
