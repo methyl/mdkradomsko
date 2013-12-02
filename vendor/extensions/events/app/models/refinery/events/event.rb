@@ -75,6 +75,12 @@ module Refinery
         type.name.downcase
       end
 
+      def image
+        if images.any?
+          images[0]
+        end
+      end
+
       def self.by_type(type)
         joins('
           JOIN refinery_events_type_translations AS type
