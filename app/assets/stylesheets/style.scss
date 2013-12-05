@@ -632,3 +632,20 @@ section.rozewicz {
 section.rozewicz img {
 	width: 190px
 }
+
+.pagination {
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	padding-top: 20px;
+	clear: both;
+	overflow: hidden;
+
+	em.current {
+		font-style: normal;
+	}
+
+	a {
+		font-weight: bold;
+	}
+}
