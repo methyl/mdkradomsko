@@ -3,7 +3,7 @@
 <%= render 'refinery/head' %>
 
 <body>
-<!--panele-->  
+<!--panele-->
 <aside id="sidebar">
   <aside id="facebook">
     <a href="http://www.facebook.com/" class="fb"></a>
@@ -22,7 +22,7 @@
   </aside>
 </aside>
 
-<!--HEADER-->  
+<!--HEADER-->
 <header>
   <div class="container">
     <div id="top">
@@ -36,12 +36,12 @@
   </div>
 </header>
 
-<!--CONTENT-->  
+<!--CONTENT-->
 <div id="content">
   <%= yield %>
 </div>
 
-<!--Advertisement-->  
+<!--Advertisement-->
 <aside id="advertisement">
   <h2 class="hide">Reklama</h2>
   <div class="button-advertisement">
@@ -49,7 +49,7 @@
   </div>
 </aside>
 
-<!--FOOTER-->  
+<!--FOOTER-->
 <footer>
   <aside>
     <div class="container">
@@ -57,12 +57,12 @@
       <div class="box-partners_sponsors">
         <div class="marquee">
           <% 7.times do |i| %>
-            <%= image_tag "partner#{i+1}.jpg" %> 
+            <%= image_tag "partner#{i+1}.jpg" %>
           <% end %>
         </div>
-      </div> 
-    </div>   
-    
+      </div>
+    </div>
+
   </aside>
   <div class="container">
     <section id="footer">
@@ -85,6 +85,19 @@
   <% else %>
     window.event_type = '<%= params[:type] %>';
   <% end %>
+</script>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-46143238-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
 </script>
 </body>
 

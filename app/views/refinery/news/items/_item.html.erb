@@ -1,4 +1,4 @@
-<section class="news">  
+<section class="news">
 
   <div class="box-news">
     <h5><%= item.title %></h5>
@@ -12,4 +12,5 @@
       <a href="<%= refinery.news_item_path(item) %>" class="more shadow"><%= t('news.more') %></a>
     </div>
   </div>
+  <%= will_paginate @items %>
 </section>
