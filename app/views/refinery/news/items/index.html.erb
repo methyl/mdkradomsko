@@ -1,6 +1,7 @@
 <%= content_for :body do %>
   <section id="news">
     <%= render @items %>
+    <%= will_paginate @items %>
   </section>
 <% end %>
 
