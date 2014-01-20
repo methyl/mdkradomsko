@@ -34,7 +34,7 @@
       <div class="page-gallery">
         <% @page.image_pages.each do |image| %>
           <div class="gallery-image">
-            <%= link_to image_tag(image.image.thumbnail("x150").url), image.image.thumbnail("x600").url, class: :fresco, data: {'fresco-group' => 'group', 'fresco-caption' => image.caption}  %>
+            <%= link_to image_tag(image.image.thumbnail("x150").url), image.image.url, class: :fresco, data: {'fresco-group' => 'group', 'fresco-caption' => image.caption}  %>
             <p><%= raw image.caption %></p>
           </div>
         <% end %>
