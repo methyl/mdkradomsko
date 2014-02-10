@@ -1,10 +1,10 @@
-<% if @promoted %>
+<% if @promoted and @promoted.image %>
   <section id="promoted">
     <h2>Promowane</h2>
     <div class="box-promoted">
       <div>
       <%= link_to image_tag(@promoted.image.thumbnail.url), refinery.events_event_path(@promoted) %>
     </div>
-    </div>       
+    </div>
   </section>
 <% end %>
