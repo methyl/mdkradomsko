@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Odnośnik:</b>
+  <%= link_to @ad.url %>
+</p>
+
+<p>
+  <b>Banner:</b> <br />
+  <%= filepicker_image_tag @ad.image_url, w: 270, fit: 'clip' %>
+</p>
+
+<p>
+  <b>Nazwa:</b>
+  <%= @ad.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>

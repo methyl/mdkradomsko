@@ -2,12 +2,12 @@ pl:
   pagination:
     new: 'Nowsze'
     old: 'Starsze'
-  news: 
+  news:
     more: "Czytaj więcej"
     see_all: "Zobacz wszystkie"
   date:
     formats:
-      default: "%d %B %Y"
+      default: "%-e.%m.%Yr."
   activerecord:
     attributes:
       'refinery/news/item':
@@ -78,7 +78,7 @@ pl:
         close: Zamknij
       image_picker:
         none_selected: Nie ma zaznaczonych, kliknij tutaj aby jakieś dodać.
-        remove_current: Usuń obecny 
+        remove_current: Usuń obecny
         change: Kliknij tutaj aby wybrać obrazek
         show: Pokaż
       resource_picker:

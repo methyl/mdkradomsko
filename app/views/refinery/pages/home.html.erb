@@ -85,6 +85,14 @@
       <section style="text-align: center; margin-top: 20px;">
         <a href="http://kinderbueno.pl"><img src="/assets/bueno.jpg" /></a>
       </section>
+
+      <h4 style="text-align: center">Reklama</h4>
+
+      <% @ads.each do |ad| %>
+        <section style="text-align: center; margin-top: 20px;">
+          <%= link_to filepicker_image_tag(ad.image_url, w: 270, fit: 'clip'), ad.url %>
+        </section>
+      <% end %>
       </aside>
 
     </div>

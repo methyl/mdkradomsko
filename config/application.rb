@@ -80,5 +80,7 @@ module Mdkradomsko
       end
     end
 
+
+    config.filepicker_rails.api_key = "AVYyxmi5DTzi9G9XU0N98z"
   end
 end

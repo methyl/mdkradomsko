@@ -1,0 +1,27 @@
+<h1>Reklamy</h1>
+
+<table>
+  <tr>
+    <th>Odnosnik</th>
+    <th>Adres obrazka</th>
+    <th>Nazwa</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ads.each do |ad| %>
+  <tr>
+    <td><%= ad.url %></td>
+    <td><%= ad.image_url %></td>
+    <td><%= ad.name %></td>
+    <td><%= link_to 'Pokaż', ad %></td>
+    <td><%= link_to 'Edytuj', edit_ad_path(ad) %></td>
+    <td><%= button_to 'Usuń', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nowa reklama', new_ad_path %>

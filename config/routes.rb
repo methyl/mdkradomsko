@@ -1,4 +1,6 @@
 Mdkradomsko::Application.routes.draw do
+  resources :ads
+
   match "/:photo" => redirect { |p| "http://mdkradomsko.s3-external-3.amazonaws.com/assets/#{p[:photo]}.jpg" }, :format => :jpg, :constraints => {:photo => /t\d+/}
 
   # This line mounts Refinery's routes at the root of your application.

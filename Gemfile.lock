@@ -124,6 +124,8 @@ GEM
     excon (0.25.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    filepicker-rails (1.0.0)
+      rails (>= 3.2)
     fog (1.14.0)
       builder
       excon (~> 0.25.0)
@@ -260,6 +262,7 @@ DEPENDENCIES
   asset_sync
   capistrano
   coffee-rails (~> 3.2.1)
+  filepicker-rails
   jquery-rails (~> 2.0.0)
   mysql2
   newrelic_rpm

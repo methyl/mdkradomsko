@@ -9,7 +9,7 @@
   <%= @event.info %>
   <div class="dates">
     <% @event.grouped_times.each do |date, times| %>
-      <strong><%= l(date) %>:</strong> <br />
+      <strong><%= l(date) %></strong> <br />
       <div class="hours">
         <% times.each do |time| %>
           <% if time.msk_url %>

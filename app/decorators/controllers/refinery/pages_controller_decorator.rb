@@ -2,6 +2,7 @@
 
 Refinery::PagesController.class_eval do
   def home
+    @ads = Ad.all
     @news = Refinery::News::Item.latest(6)
     @latest_news = @news.slice!(0)
     @side_events = Refinery::Events::Event.today
