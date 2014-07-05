@@ -3,7 +3,7 @@
 Refinery::PagesController.class_eval do
   def home
     @ads = Ad.all
-    @news = Refinery::News::Item.latest(6)
+    @news = Refinery::News::Item.latest(16)
     @latest_news = @news.slice!(0)
     @side_events = Refinery::Events::Event.today
     @elapsed_events = Refinery::Events::Event.active.elapsed.order('position').limit(5)
