@@ -12,7 +12,7 @@ module Refinery
 
       def archive
         @page_title = params[:type].capitalize + " - " + ::I18n.t('refinery.plugins.events.archive')
-        @events = @events.archived.paginate(page: params[:page])
+        @events = @events.archived
 
         by_date(Date.strptime(params[:date])) if params[:date]
         render :index
@@ -54,11 +54,11 @@ module Refinery
       end
 
       def find_active_events
-        @events = Event.active.order('refinery_events.position asc')
+        @events = Event.active.order('refinery_events.position asc').paginate(page: params[:page])
       end
 
       def find_all_events
-        @events = Event.order('refinery_events.position asc').includes(:translations, :images, :times)
+        @events = Event.order('refinery_events.position asc').includes(:translations, :images, :times).paginate(page: params[:page])
       end
 
       def find_events_by_type
