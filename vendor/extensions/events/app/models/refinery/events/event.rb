@@ -89,7 +89,7 @@ module Refinery
       end
 
       def self.promoted
-        find_by_promoted(true)
+        where(promoted: true).order('created_at desc').first
       end
 
       def self.dates
