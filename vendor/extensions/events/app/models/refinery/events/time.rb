@@ -10,7 +10,7 @@ module Refinery
 
       default_scope order('time ASC')
 
-      belongs_to :event 
+      belongs_to :event
 
       # before_validation :set_msk_event_id
 
@@ -20,7 +20,7 @@ module Refinery
 
       def msk_url(return_url="http://mdkradomsko.pl")
         return unless msk_event_id
-        "http://79.190.29.26/msi/default.aspx?event_id=#{msk_event_id}&returnlink=#{return_url}"
+        "http://77.253.229.65/msi/default.aspx?event_id=#{msk_event_id}&returnlink=#{return_url}"
       end
 
       # def set_msk_event_id
