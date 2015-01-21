@@ -1,13 +1,10 @@
 source 'https://rubygems.org'
-gem 'pry'
-gem 'rails', '3.2.13'
-gem 'unicorn'
-gem 'newrelic_rpm'
-gem 'pg'
-gem 'filepicker-rails'
+ruby '2.1.5'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'pry'
+gem 'rails', '3.2.18'
+gem 'unicorn'
+gem 'filepicker-rails'
 
 gem 'mysql2'
 gem 'asset_sync'
@@ -15,13 +12,6 @@ gem 'asset_sync'
 group :development, :test do
   gem 'sqlite3'
 end
-
-group :development do
-  gem "capistrano"
-  gem 'rvm-capistrano'
-  gem 'yaml_db'
-end
-
 
 # Gems used only for assets and not required
 # in production environments by default.
