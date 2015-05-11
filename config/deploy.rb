@@ -1,7 +1,6 @@
 require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
-# require 'mina/rbenv'  # for rbenv support. (http://rbenv.org)
 require 'mina/rvm'    # for rvm support. (http://rvm.io)
 
 # Basic settings:
@@ -10,20 +9,20 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :domain, '188.226.169.81'
-set :deploy_to, '/home/aimer/mdkradomsko'
-set :repository, 'git@github.com:methyl/mdkradomsko.git'
+set :domain, 'aimer@188.226.169.81'
+set :deploy_to, '$HOME/mdkradomsko'
+set :repository, 'https://github.com/methyl/mdkradomsko.git'
 set :branch, 'master'
 
 # For system-wide RVM install.
-#   set :rvm_path, '/usr/local/rvm/bin/rvm'
+set :rvm_path, "$HOME/.rvm/scripts/rvm"
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
 set :shared_paths, ['config/database.yml', 'log']
 
 # Optional settings:
-set :user, 'root'    # Username in the server to SSH to.
+# set :user, 'aimer'    # Username in the server to SSH to.
 #   set :port, '30000'     # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
 
@@ -35,7 +34,7 @@ task :environment do
   # invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
-  # invoke :'rvm:use[ruby-1.9.3-p125@default]'
+  invoke :'rvm:use[ruby-2.1.5@default]'
 end
 
 # Put any custom mkdir's in here for when `mina setup` is ran.
@@ -55,8 +54,8 @@ end
 desc "Deploys the current version to the server."
 task :deploy => :environment do
   to :before_hook do
-    # Put things to run locally before ssh
   end
+
   deploy do
     # Put things that will set up an empty directory into a fully set-up
     # instance of your project.
