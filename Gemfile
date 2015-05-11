@@ -9,6 +9,7 @@ gem 'filepicker-rails'
 gem 'mysql2'
 gem 'asset_sync'
 
+gem 'mina'
 group :development, :test do
   gem 'sqlite3'
 end
