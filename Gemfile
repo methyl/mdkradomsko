@@ -11,7 +11,7 @@ gem 'mysql2'
 
 gem 'mina'
 
-gem 'dotenv'
+gem 'dotenv-rails'
 group :development, :test do
   gem 'sqlite3'
 end
