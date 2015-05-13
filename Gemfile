@@ -7,7 +7,7 @@ gem 'unicorn'
 gem 'filepicker-rails'
 
 gem 'mysql2'
-# gem 'asset_sync'
+gem 'asset_sync'
 
 gem 'mina'
 
