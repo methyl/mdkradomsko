@@ -108,6 +108,7 @@ GEM
       orm_adapter (~> 0.0.3)
       railties (~> 3.1)
       warden (~> 1.1.1)
+    dotenv (1.0.2)
     dragonfly (0.9.14)
       multi_json (~> 1.0)
       rack
@@ -225,6 +226,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  dotenv
   filepicker-rails
   jquery-rails (~> 2.0.0)
   mina

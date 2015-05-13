@@ -10,6 +10,8 @@ gem 'mysql2'
 # gem 'asset_sync'
 
 gem 'mina'
+
+gem 'dotenv'
 group :development, :test do
   gem 'sqlite3'
 end

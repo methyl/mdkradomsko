@@ -19,7 +19,7 @@ set :rvm_path, "$HOME/.rvm/scripts/rvm"
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, ['config/database.yml', 'log']
+set :shared_paths, ['config/database.yml', 'log', '.env']
 
 # Optional settings:
 # set :user, 'aimer'    # Username in the server to SSH to.
@@ -35,6 +35,8 @@ task :environment do
 
   # For those using RVM, use this to load an RVM version@gemset.
   invoke :'rvm:use[ruby-2.1.5@default]'
+  queue! %[source ~/.bashrc]
+  queue! %[echo $S3_BUCKET]
 end
 
 # Put any custom mkdir's in here for when `mina setup` is ran.
@@ -46,6 +48,9 @@ task :setup => :environment do
 
   queue! %[mkdir -p "#{deploy_to}/#{shared_path}/config"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/#{shared_path}/config"]
+
+  queue! %[mkdir -p "#{deploy_to}/#{shared_path}/.env"]
+  queue! %[chmod g+rx,u+rwx "#{deploy_to}/#{shared_path}/.env"]
 
   queue! %[touch "#{deploy_to}/#{shared_path}/config/database.yml"]
   queue  %[echo "-----> Be sure to edit '#{deploy_to}/#{shared_path}/config/database.yml'."]
